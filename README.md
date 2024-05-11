@@ -2,7 +2,6 @@
 Componentes: Arthur dos Santos Reimberg e Arthur Quintino de Santana 2DS<br>
 Nome:  AmbilitySP
 <br>
-	```sh
 </h1>
 
 
@@ -12,7 +11,6 @@ Nome:  AmbilitySP
 	Mas por que devemos ter um certo apreço por reciclar na praia? Como dito antes, o Brasil está numa posição alta em poluição marítima, e isso só seria possível por conta das praias e rios que temos em nosso país. Levando isso em consideração, devemos eliminar todas as possibilidades de poluição nas praias do estado onde moramos, São Paulo.<br><br>
 	Contudo, este aplicativo será de grande ajuda para que todo lixo descartado de modo incorreto nas praias, possam ser evitado por reciclarem ou denunciarem alguma conduta que promova a poluição.<br>
 <br>
-	```
 Detalhes: Alertar e disponibilizar os moradores e os turistas da região litorânea paulistana sobre questões ecológicas e ambientais, que permite que o usuário interaja com informações como:<br>
 - Dias de coleta seletiva<br>
 - Pontos de coleta de lixo<br>
