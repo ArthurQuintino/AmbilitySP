@@ -9,8 +9,8 @@ Nome:  AmbilitySP</h1>
 	Contudo, este aplicativo será de grande ajuda para que todo lixo descartado de modo incorreto nas praias, possam ser evitado por reciclarem ou denunciarem alguma conduta que promova a poluição.<br>
 <br><br>
 Detalhes: Alertar e disponibilizar os moradores e os turistas da região litorânea paulistana sobre questões ecológicas e ambientais, que permite que o usuário interaja com informações como:
-- Dias de coleta seletiva
-- Pontos de coleta de lixo
-- Como descartar seu lixo
-- Contatos para denuncias ambientais
+- Dias de coleta seletiva<br>
+- Pontos de coleta de lixo<br>
+- Como descartar seu lixo<br>
+- Contatos para denuncias ambientais<br>
 </h2>
