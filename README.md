@@ -1,6 +1,8 @@
-<h1>Proposta de Aplicação
-Componentes: Arthur dos Santos Reimberg e Arthur Quintino de Santana 2DS
-Nome:  AmbilitySP</h1>
+<h1>Proposta de Aplicação <br>
+Componentes: Arthur dos Santos Reimberg e Arthur Quintino de Santana 2DS<br>
+Nome:  AmbilitySP
+<br>
+</h1>
 
 <h3> 	O objetivo de nossa aplicação, é facilitar a conscientização à população a respeito de como descartar corretamente os lixos, com o intuito de evitar poluição nas praias do litoral de São Paulo.<br><br>
 	A reciclagem se tornou algo irrelevante aos olhos de muita gente,  tanto é que de acordo com o  BBC NEWS Brasil, nosso país ocupa a 16ª posição no ranking dos países mais poluidores dos mares. Muitos não percebem os diversos benefícios que a reciclagem trazem para nós, então é necessário conscientizá-los de como reciclar e quais os benefícios. <br><br>
