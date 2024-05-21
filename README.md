@@ -12,5 +12,4 @@ Alertar e disponibilizar os moradores e os turistas da região litorânea paulis
 
 lista de links para os tópicos da wiki 
 
-
-[[https://github.com/ArthurQuintino/AmbilitySP/wiki#objetivo-da-aplica%C3%A7%C3%A3o-|Objetivo da Aplicação]]
+[https://github.com/ArthurQuintino/AmbilitySP/wiki#objetivo-da-aplica%C3%A7%C3%A3o-](WikiPage)
