@@ -10,7 +10,7 @@ Alertar e disponibilizar os moradores e os turistas da região litorânea paulis
 - Economia Circular <br>
 </h2>
 
-Guia<br>
+Sumario Wiki
 
 [Objetivo da Aplicação](https://github.com/ArthurQuintino/AmbilitySP/wiki#objetivo-da-aplica%C3%A7%C3%A3o-)<br>
 [Benefícios da Reciclagem](https://github.com/ArthurQuintino/AmbilitySP/wiki#benef%C3%ADcios-da-reciclagem-)<br>
