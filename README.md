@@ -1,4 +1,4 @@
-<h2>Nome do projeto: AmbilitySP <br>
+<h2>Nome da aplicação: AmbilitySP <br>
 Integrantes: Arthur dos Santos Reimberg e Arthur Quintino de Santana</h2>
 
 <h3>Descrição do projeto <br>
