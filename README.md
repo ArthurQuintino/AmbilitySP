@@ -1,6 +1,5 @@
 <h2>Nome da aplicação: AmbilitySP <br>
 Integrantes: Arthur dos Santos Reimberg e Arthur Quintino de Santana</h2>
-
 <h3>Descrição do projeto <br>
 Alertar e disponibilizar os moradores e os turistas da região litorânea paulistana sobre questões ecológicas e ambientais, que permite que o usuário interaja com informações como: <br>
 - Dias de coleta seletiva <br>
