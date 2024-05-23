@@ -12,9 +12,9 @@ Alertar e disponibilizar os moradores e os turistas da região litorânea paulis
 
 <h3>Sumario Wiki</h3>
 
-[Objetivo da Aplicação](https://github.com/ArthurQuintino/AmbilitySP/wiki#objetivo-da-aplica%C3%A7%C3%A3o-)<br>
-[Benefícios da Reciclagem](https://github.com/ArthurQuintino/AmbilitySP/wiki#benef%C3%ADcios-da-reciclagem-)<br>
-[Por que reciclar na praia?](https://github.com/ArthurQuintino/AmbilitySP/wiki#por-que-reciclar-na-praia--)<br>
-[Detalhes sobre a aplicação:](https://github.com/ArthurQuintino/AmbilitySP/wiki#detalhes-sobre-a-aplica%C3%A7%C3%A3o-)<br>
-[Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki#detalhes-sobre-a-aplica%C3%A7%C3%A3o-)<br>
+[Objetivo da Aplicação](https://github.com/ArthurQuintino/AmbilitySP/wiki/Proposta-de-Aplica%C3%A7%C3%A3o#objetivo-da-aplica%C3%A7%C3%A3o-)<br>
+[Benefícios da Reciclagem](https://github.com/ArthurQuintino/AmbilitySP/wiki/Proposta-de-Aplica%C3%A7%C3%A3o#benef%C3%ADcios-da-reciclagem-)<br>
+[Por que reciclar na praia?](https://github.com/ArthurQuintino/AmbilitySP/wiki/Proposta-de-Aplica%C3%A7%C3%A3o#por-que-reciclar-na-praia--)<br>
+[Detalhes sobre a aplicação:](https://github.com/ArthurQuintino/AmbilitySP/wiki/Proposta-de-Aplica%C3%A7%C3%A3o#detalhes-sobre-a-aplica%C3%A7%C3%A3o-)<br>
+[Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-paginas-de-nosso-projeto)<br>
 
