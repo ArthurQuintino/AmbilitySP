@@ -15,5 +15,5 @@ Alertar e disponibilizar os moradores e os turistas da região litorânea paulis
 [Benefícios da Reciclagem](https://github.com/ArthurQuintino/AmbilitySP/wiki#benef%C3%ADcios-da-reciclagem-)<br>
 [Por que reciclar na praia?](https://github.com/ArthurQuintino/AmbilitySP/wiki#por-que-reciclar-na-praia--)<br>
 [Detalhes sobre a aplicação:](https://github.com/ArthurQuintino/AmbilitySP/wiki#por-que-reciclar-na-praia--)<br>
-[Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-paginas-de-nosso-projeto)<br>
+[Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-paginas)<br>
 
