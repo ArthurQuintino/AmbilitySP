@@ -18,5 +18,5 @@ Nosso aplicativo consiste em Alertar e disponibilizar aos moradores e turistas d
 [Benefícios da Reciclagem](https://github.com/ArthurQuintino/AmbilitySP/wiki#benef%C3%ADcios-da-reciclagem-)<br>
 [Por que reciclar na praia?](https://github.com/ArthurQuintino/AmbilitySP/wiki#por-que-reciclar-na-praia--)<br>
 [Por que o nome AmbilitySP?](https://github.com/ArthurQuintino/AmbilitySP/wiki#por-que-reciclar-na-praia--)<br>
-[Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-paginas)<br>
+[Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-páginas)<br>
 
