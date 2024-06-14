@@ -45,7 +45,7 @@ class SecondPage extends StatelessWidget {
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.pop(context); // navigator para voltar para a pagina anterior
                   },
                   leading: const Image(
                     image: AssetImage('images/house.png'),

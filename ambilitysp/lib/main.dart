@@ -33,12 +33,12 @@ class MainApp extends StatelessWidget {
               iconTheme: const IconThemeData(color: Colors.white),
             ),
             backgroundColor: const Color.fromARGB(255, 77, 167, 104), // cor geral de fundo do aplicativo
-            drawer: Drawer( // inicio da nossa barra lateral
+            drawer: Drawer( // inicio da barra lateral
                 backgroundColor: const Color.fromARGB(255, 4, 101, 60),
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   children: [
-                    ListTile( // itens da nossa barra lateral
+                    ListTile( // itens da barra lateral
                       title: Text('Opções:',
                           style: GoogleFonts.jetBrainsMono(
                               textStyle: const TextStyle(
@@ -104,8 +104,8 @@ class MainApp extends StatelessWidget {
                     ),
                   ],
                 )),
-            body: SingleChildScrollView( // adiciona scroll a nossa aplicação
-                child: Center( // alinha  no centro
+            body: SingleChildScrollView( // adiciona scroll na aplicação
+                child: Center( // alinha no centro todo o body
                     child: Column(children: [ // coluna principal do aplicativo
               Container( // titulo principal
                 width: largura,
@@ -118,7 +118,7 @@ class MainApp extends StatelessWidget {
               const Gap(20), // espaçamento
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 0, 27, 0),
-                child: Container( // container com imagens da parceria entre o estado de são paulo e a nossa empresa.
+                child: Container( // container com imagens da parceria entre o estado de são paulo e a empresa.
                     width: largura * 1,
                     height: altura * 0.3,
                     decoration: BoxDecoration(
@@ -183,7 +183,7 @@ class MainApp extends StatelessWidget {
                 ),
               ),
               const Gap(20),
-              Padding( // container com texto para incentivar a acessar nosso menu
+              Padding( // container com texto para incentivar o acesso ao menu
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
                   width: largura * 1.0,
