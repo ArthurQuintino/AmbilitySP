@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,12 +7,12 @@ import 'package:ambilitysp/main.dart';
 void main() {
   runApp(const MaterialApp(
     title: "App",
-    home: second(),
+    home: secondPage(),
   ));
 }
 
-class second extends StatelessWidget {
-  const second({super.key});
+class secondPage extends StatelessWidget {
+  const secondPage({super.key});
 
   @override
   Widget build(BuildContext context) {

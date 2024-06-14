@@ -5,7 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gap/gap.dart';
-import 'package:ambilitysp/second.dart';
+import 'package:ambilitysp/secondPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -62,7 +62,7 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const second()),
+                              builder: (context) => const secondPage()),
                         );
                       },
                       leading: const Image(
@@ -78,7 +78,7 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const second()),
+                              builder: (context) => const secondPage()),
                         );
                       },
                       leading: const Image(
@@ -94,7 +94,7 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const second()),
+                              builder: (context) => const secondPage()),
                         );
                       },
                       leading: const Image(
