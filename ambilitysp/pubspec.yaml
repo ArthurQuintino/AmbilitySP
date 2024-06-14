@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  gap: ^3.0.1
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -17,11 +19,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
-assets:
-  - images/img1.png
+  assets:
+  - images/
 
-fonts:
-  - family: jetbrains
-    fonts:
-     - asset: fonts/JetBrainsMono-Regular.ttf
