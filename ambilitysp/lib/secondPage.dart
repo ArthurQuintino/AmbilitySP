@@ -94,7 +94,7 @@ class SecondPage extends StatelessWidget {
                       width: 470,
                       height: 200,
                       margin: const EdgeInsets.only(top: 25),
-                      padding: const EdgeInsets.all(15),
+                      padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 57, 130, 79),
                         borderRadius: BorderRadius.circular(26),
@@ -196,6 +196,23 @@ class SecondPage extends StatelessWidget {
                             ]),
                       ),
                     ])), //container 2 pt.1
+              ),
+              Container(
+                width: largura,
+                height: 60,
+                margin: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.all(20),
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 115, 211, 107),
+                ),
+                child: Center(
+                  child: Text(
+                    'Denúncias Ambientais',
+                    style: GoogleFonts.jetBrainsMono(
+                      textStyle: const TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
