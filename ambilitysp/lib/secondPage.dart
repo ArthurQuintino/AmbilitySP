@@ -29,12 +29,12 @@ class SecondPage extends StatelessWidget {
           iconTheme: const IconThemeData(color: Colors.white),
         ),
         backgroundColor: const Color.fromARGB(255, 77, 167, 104),
-        drawer: Drawer(
+        drawer: Drawer( // Inicio da Barra lateral
             backgroundColor: const Color.fromARGB(255, 4, 101, 60),
             child: ListView(
               padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               children: [
-                ListTile(
+                ListTile( // itens da barra lateral
                   title: Text('Opções:',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
@@ -84,9 +84,9 @@ class SecondPage extends StatelessWidget {
                 ),
               ],
             )),
-        body: SingleChildScrollView(
-            child: Center(
-          child: Column(
+        body: SingleChildScrollView( //  scroll da pagina
+            child: Center( 
+          child: Column( // coluna principal
             children: [
               Padding(
                   padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
@@ -108,10 +108,10 @@ class SecondPage extends StatelessWidget {
                                   color: Colors.white,
                                   fontSize:
                                       15))))), //primeiro container, contém as informações sobre dias de coleta
-              const Gap(15),
+              const Gap(15), // espaçamento
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
-                child: Container(
+                child: Container( // container com descrição de Como descartar seu lixo corretamente
                     width: 470,
                     height: 540,
                     padding: const EdgeInsets.all(20),
@@ -127,13 +127,13 @@ class SecondPage extends StatelessWidget {
                                   color: Colors.white, fontSize: 15))),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                        child: Row(
+                        child: Row( // linha de sustentação para a descrição de como descartar seu lixo.
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Center(
                                   child: Column(
                                 children: [
-                                  const CircleAvatar(
+                                  const CircleAvatar( // para definir a figura que indica a cor da lixeira
                                       backgroundColor:
                                           Color.fromARGB(255, 255, 0, 0),
                                       radius: 26),
@@ -214,7 +214,7 @@ class SecondPage extends StatelessWidget {
                           color: Colors.white,
                         )))), //terceiro container, seção de denúncias
               ),
-              Container(
+              Container( 
                   width: largura,
                   height: 110,
                   margin: const EdgeInsets.only(top: 30),
