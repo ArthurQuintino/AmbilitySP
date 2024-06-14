@@ -62,7 +62,7 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const secondPage()),
+                              builder: (context) => const SecondPage()),
                         );
                       },
                       leading: const Image(
@@ -78,7 +78,7 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const secondPage()),
+                              builder: (context) => const SecondPage()),
                         );
                       },
                       leading: const Image(
@@ -94,7 +94,7 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const secondPage()),
+                              builder: (context) => const SecondPage()),
                         );
                       },
                       leading: const Image(

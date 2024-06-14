@@ -7,12 +7,12 @@ import 'package:ambilitysp/main.dart';
 void main() {
   runApp(const MaterialApp(
     title: "App",
-    home: secondPage(),
+    home: SecondPage(),
   ));
 }
 
-class secondPage extends StatelessWidget {
-  const secondPage({super.key});
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
