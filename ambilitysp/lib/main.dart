@@ -6,6 +6,8 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gap/gap.dart';
 import 'package:ambilitysp/secondPage.dart';
+import 'package:ambilitysp/thirdPage.dart';
+import 'package:ambilitysp/fourthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -19,12 +21,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final altura = MediaQuery.of(context).size.height; // contador de altura da tela
-    final largura = MediaQuery.of(context).size.width; // contador de largura da tela
+    final altura =
+        MediaQuery.of(context).size.height; // contador de altura da tela
+    final largura =
+        MediaQuery.of(context).size.width; // contador de largura da tela
 
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar( // barra superior
+            appBar: AppBar(
+              // barra superior
               title: Text('AmbilitySP',
                   style: GoogleFonts.jetBrainsMono(
                       textStyle: const TextStyle(color: Colors.white))),
@@ -32,13 +37,16 @@ class MainApp extends StatelessWidget {
               backgroundColor: const Color.fromARGB(255, 0, 102, 51),
               iconTheme: const IconThemeData(color: Colors.white),
             ),
-            backgroundColor: const Color.fromARGB(255, 77, 167, 104), // cor geral de fundo do aplicativo
-            drawer: Drawer( // inicio da barra lateral
+            backgroundColor: const Color.fromARGB(
+                255, 77, 167, 104), // cor geral de fundo do aplicativo
+            drawer: Drawer(
+                // inicio da barra lateral
                 backgroundColor: const Color.fromARGB(255, 4, 101, 60),
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   children: [
-                    ListTile( // itens da barra lateral
+                    ListTile(
+                      // itens da barra lateral
                       title: Text('Opções:',
                           style: GoogleFonts.jetBrainsMono(
                               textStyle: const TextStyle(
@@ -62,11 +70,29 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SecondPage()), // caminho para a segunda pagina
+                              builder: (context) =>
+                                  const SecondPage()), // caminho para a segunda pagina
                         );
                       },
                       leading: const Image(
                         image: AssetImage('images/calendar.png'),
+                        width: 40,
+                      ),
+                    ),
+                    ListTile(
+                      title: Text('Pontos de Coleta de Lixo',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ThirdPage()), // caminho para a Terceira pagina
+                        );
+                      },
+                      leading: const Image(
+                        image: AssetImage('images/map.png'),
                         width: 40,
                       ),
                     ),
@@ -78,7 +104,8 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SecondPage()), // caminho para a segunda pagina
+                              builder: (context) =>
+                                  const SecondPage()), // caminho para a segunda pagina
                         );
                       },
                       leading: const Image(
@@ -94,7 +121,8 @@ class MainApp extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SecondPage()), // caminho para a segunda pagina
+                              builder: (context) =>
+                                  const SecondPage()), // caminho para a segunda pagina
                         );
                       },
                       leading: const Image(
@@ -102,12 +130,33 @@ class MainApp extends StatelessWidget {
                         width: 40,
                       ),
                     ),
+                    ListTile(
+                      title: Text('Economia Circular',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const FourthPage()), // caminho para a quarta pagina
+                        );
+                      },
+                      leading: const Image(
+                        image: AssetImage('images/recicle.png'),
+                        width: 40,
+                      ),
+                    ),
                   ],
                 )),
-            body: SingleChildScrollView( // adiciona scroll na aplicação
-                child: Center( // alinha no centro todo o body
-                    child: Column(children: [ // coluna principal do aplicativo
-              Container( // titulo principal
+            body: SingleChildScrollView(
+                // adiciona scroll na aplicação
+                child: Center(
+                    // alinha no centro todo o body
+                    child: Column(children: [
+              // coluna principal do aplicativo
+              Container(
+                // titulo principal
                 width: largura,
                 padding: const EdgeInsets.fromLTRB(27, 30, 27, 0),
                 child: Text('Bem vindo! proteja o meio ambiente com a gente!',
@@ -118,7 +167,8 @@ class MainApp extends StatelessWidget {
               const Gap(20), // espaçamento
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 0, 27, 0),
-                child: Container( // container com imagens da parceria entre o estado de são paulo e a empresa.
+                child: Container(
+                    // container com imagens da parceria entre o estado de são paulo e a empresa.
                     width: largura * 1,
                     height: altura * 0.3,
                     decoration: BoxDecoration(
@@ -140,16 +190,18 @@ class MainApp extends StatelessWidget {
               const Gap(20), // espaçamento
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 0, 27, 0),
-                child: Text(  // texto descritivo
+                child: Text(
+                    // texto descritivo
                     'O litoral paulistano vem sofrendo com o descarte irregular de lixo nos Mares, acabando com a nossa biodiversidade',
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.jetBrainsMono(
                         textStyle: const TextStyle(color: Colors.white))),
               ),
               const Gap(20),
-              Padding( 
+              Padding(
                 padding: const EdgeInsets.fromLTRB(27, 0, 27, 0),
-                child: Column( // container com imagem de santos e bordas definidas pelo border radius
+                child: Column(
+                  // container com imagem de santos e bordas definidas pelo border radius
                   children: <Widget>[
                     Container(
                       width: double.infinity,
@@ -163,7 +215,8 @@ class MainApp extends StatelessWidget {
                               topLeft: Radius.circular(20.0),
                               topRight: Radius.circular(20.0))),
                     ),
-                    Align( // container com o descritivo da imagem de santos
+                    Align(
+                        // container com o descritivo da imagem de santos
                         alignment: Alignment.bottomLeft,
                         child: Container(
                             decoration: const BoxDecoration(
@@ -183,7 +236,8 @@ class MainApp extends StatelessWidget {
                 ),
               ),
               const Gap(20),
-              Padding( // container com texto para incentivar o acesso ao menu
+              Padding(
+                // container com texto para incentivar o acesso ao menu
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
                   width: largura * 1.0,
@@ -200,7 +254,8 @@ class MainApp extends StatelessWidget {
                       )),
                 ),
               ),
-              Container( // footer final.
+              Container(
+                  // footer final.
                   width: largura,
                   height: 50,
                   margin: const EdgeInsets.only(top: 30),

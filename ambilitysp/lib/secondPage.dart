@@ -3,6 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
+import 'package:ambilitysp/secondPage.dart';
+import 'package:ambilitysp/thirdPage.dart';
+import 'package:ambilitysp/fourthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -29,12 +32,14 @@ class SecondPage extends StatelessWidget {
           iconTheme: const IconThemeData(color: Colors.white),
         ),
         backgroundColor: const Color.fromARGB(255, 77, 167, 104),
-        drawer: Drawer( // Inicio da Barra lateral
+        drawer: Drawer(
+            // inicio da barra lateral
             backgroundColor: const Color.fromARGB(255, 4, 101, 60),
             child: ListView(
               padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               children: [
-                ListTile( // itens da barra lateral
+                ListTile(
+                  // itens da barra lateral
                   title: Text('Opções:',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
@@ -45,7 +50,12 @@ class SecondPage extends StatelessWidget {
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
                   onTap: () {
-                    Navigator.pop(context); // navigator para voltar para a pagina anterior
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const MainApp()), // caminho para a primeira pagina
+                    );
                   },
                   leading: const Image(
                     image: AssetImage('images/house.png'),
@@ -56,9 +66,33 @@ class SecondPage extends StatelessWidget {
                   title: Text('Dias de coleta seletiva',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const SecondPage()), // caminho para a segunda pagina
+                    );
+                  },
                   leading: const Image(
                     image: AssetImage('images/calendar.png'),
+                    width: 40,
+                  ),
+                ),
+                ListTile(
+                  title: Text('Pontos de Coleta de Lixo',
+                      style: GoogleFonts.jetBrainsMono(
+                          textStyle: const TextStyle(color: Colors.white))),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const ThirdPage()), // caminho para a terceira pagina
+                    );
+                  },
+                  leading: const Image(
+                    image: AssetImage('images/map.png'),
                     width: 40,
                   ),
                 ),
@@ -66,7 +100,14 @@ class SecondPage extends StatelessWidget {
                   title: Text('Como descartar seu lixo',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const SecondPage()), // caminho para a segunda pagina
+                    );
+                  },
                   leading: const Image(
                     image: AssetImage('images/question.png'),
                     width: 40,
@@ -76,17 +117,43 @@ class SecondPage extends StatelessWidget {
                   title: Text('Denúncias',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const SecondPage()), // caminho para a segunda pagina
+                    );
+                  },
                   leading: const Image(
                     image: AssetImage('images/telephone.png'),
                     width: 40,
                   ),
                 ),
+                ListTile(
+                  title: Text('Economia Circular',
+                      style: GoogleFonts.jetBrainsMono(
+                          textStyle: const TextStyle(color: Colors.white))),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const FourthPage()), // caminho para a quarta pagina
+                    );
+                  },
+                  leading: const Image(
+                    image: AssetImage('images/recicle.png'),
+                    width: 40,
+                  ),
+                ),
               ],
             )),
-        body: SingleChildScrollView( //  scroll da pagina
-            child: Center( 
-          child: Column( // coluna principal
+        body: SingleChildScrollView(
+            //  scroll da pagina
+            child: Center(
+          child: Column(
+            // coluna principal
             children: [
               Padding(
                   padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
@@ -111,7 +178,8 @@ class SecondPage extends StatelessWidget {
               const Gap(15), // espaçamento
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
-                child: Container( // container com descrição de Como descartar seu lixo corretamente
+                child: Container(
+                    // container com descrição de Como descartar seu lixo corretamente
                     width: 470,
                     height: 540,
                     padding: const EdgeInsets.all(20),
@@ -127,13 +195,15 @@ class SecondPage extends StatelessWidget {
                                   color: Colors.white, fontSize: 15))),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                        child: Row( // linha de sustentação para a descrição de como descartar seu lixo.
+                        child: Row(
+                            // linha de sustentação para a descrição de como descartar seu lixo.
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Center(
                                   child: Column(
                                 children: [
-                                  const CircleAvatar( // para definir a figura que indica a cor da lixeira
+                                  const CircleAvatar(
+                                      // para definir a figura que indica a cor da lixeira
                                       backgroundColor:
                                           Color.fromARGB(255, 255, 0, 0),
                                       radius: 26),
@@ -231,7 +301,7 @@ class SecondPage extends StatelessWidget {
                           color: Colors.white,
                         )))), //terceiro container, seção de denúncias
               ),
-              Container( 
+              Container(
                   width: largura,
                   height: 110,
                   margin: const EdgeInsets.only(top: 30),
