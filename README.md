@@ -20,4 +20,5 @@ Nosso aplicativo consiste em alertar e disponibilizar aos moradores e turistas d
 [Por que o nome AmbilitySP?](https://github.com/ArthurQuintino/AmbilitySP/wiki#por-que-reciclar-na-praia--)<br>
 [Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-páginas)<br>
 [Documentação da Codificação](https://github.com/ArthurQuintino/AmbilitySP/wiki/Documenta%C3%A7%C3%A3o-da-Codifica%C3%A7%C3%A3o)<br>
+[Videos de Navegação](https://github.com/ArthurQuintino/AmbilitySP/wiki/Documenta%C3%A7%C3%A3o-da-Codifica%C3%A7%C3%A3o#videos-de-navega%C3%A7%C3%A3o)<br>
 
