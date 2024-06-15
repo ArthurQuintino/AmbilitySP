@@ -257,7 +257,7 @@ class SecondPage extends StatelessWidget {
                                       backgroundColor:
                                           Color.fromARGB(255, 255, 153, 0),
                                       radius: 26),
-                                  Text('Organico',
+                                  Text('Orgânicos',
                                       style: GoogleFonts.jetBrainsMono(
                                           textStyle: const TextStyle(
                                               color: Colors.white))),
