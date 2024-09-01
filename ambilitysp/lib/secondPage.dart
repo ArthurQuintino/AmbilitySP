@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
-import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 
@@ -28,13 +27,13 @@ class SecondPage extends StatelessWidget {
               style: GoogleFonts.jetBrainsMono(
                   textStyle: const TextStyle(color: Colors.white))),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 0, 102, 51),
+          backgroundColor: const Color(0xFF113C13),
           iconTheme: const IconThemeData(color: Colors.white),
         ),
-        backgroundColor: const Color.fromARGB(255, 77, 167, 104),
+        backgroundColor: const Color(0xFF0E1A0F),
         drawer: Drawer(
             // inicio da barra lateral
-            backgroundColor: const Color.fromARGB(255, 4, 101, 60),
+            backgroundColor: const Color(0xFF172318),
             child: ListView(
               padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
               children: [
@@ -163,7 +162,7 @@ class SecondPage extends StatelessWidget {
                       margin: const EdgeInsets.only(top: 25),
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 57, 130, 79),
+                        color: const Color(0xFF2E643E),
                         borderRadius: BorderRadius.circular(26),
                       ),
                       child: Text(
@@ -184,7 +183,7 @@ class SecondPage extends StatelessWidget {
                     height: 540,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 63, 63, 63),
+                        color: const Color(0xFF282828),
                         borderRadius: BorderRadius.circular(26)),
                     child: Column(children: [
                       Text(
@@ -273,7 +272,7 @@ class SecondPage extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 20),
                 padding: const EdgeInsets.all(20),
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 115, 211, 107),
+                  color: Color(0xFF3E8538),
                 ),
                 child: Center(
                   child: Text(
@@ -292,7 +291,7 @@ class SecondPage extends StatelessWidget {
                     margin: const EdgeInsets.only(top: 20),
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 57, 130, 79),
+                        color: const Color(0xFF2E643E),
                         borderRadius: BorderRadius.circular(26)),
                     child: Text(
                         'Telefones:\nIbama: 0800 618080\nOrgão estadual litoraneo: (13)3344-9400',
@@ -307,7 +306,7 @@ class SecondPage extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 30),
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 115, 211, 107)),
+                      color: Color(0xFF3E8538)),
                   child: Text(
                       'Denuncie! Voce esta fazendo um favor\npara o meio ambiente e para a saúde da\npopulação!',
                       style: GoogleFonts.jetBrainsMono(
@@ -320,7 +319,7 @@ class SecondPage extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 30),
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
-                      color: Color.fromARGB(100, 53, 97, 58)),
+                      color: Color(0xFF1A2F1C)),
                   child: Text('copyright@2024 ArthurS e ArthurQ',
                       style: GoogleFonts.faustina(
                           textStyle: const TextStyle(

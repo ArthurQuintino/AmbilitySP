@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/thirdPage.dart';
-import 'package:ambilitysp/fourthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -17,7 +16,9 @@ class FourthPage extends StatelessWidget {
   const FourthPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {// contador de altura da tela
+    final largura =
+        MediaQuery.of(context).size.width;
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -26,14 +27,14 @@ class FourthPage extends StatelessWidget {
                   style: GoogleFonts.jetBrainsMono(
                       textStyle: const TextStyle(color: Colors.white))),
               centerTitle: true,
-              backgroundColor: const Color.fromARGB(255, 0, 102, 51),
+              backgroundColor: const Color(0xFF006633),
               iconTheme: const IconThemeData(color: Colors.white),
             ),
-            backgroundColor: const Color.fromARGB(
-                255, 77, 167, 104), // cor geral de fundo do aplicativo
+            backgroundColor:
+                const Color(0xFF0E1A0F), // cor geral de fundo do aplicativo
             drawer: Drawer(
                 // inicio da barra lateral
-                backgroundColor: const Color.fromARGB(255, 4, 101, 60),
+                backgroundColor: const Color(0xFF172318),
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   children: [
@@ -141,15 +142,31 @@ class FourthPage extends StatelessWidget {
                     ),
                   ],
                 )),
-            body: const SingleChildScrollView(
+            body: SingleChildScrollView(
                 // adiciona scroll na aplicação
-                child: Center(
-                    child: Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(
-                'EM DESENVOLVIMENTO',
-                style: TextStyle(color: Colors.white, fontSize: 15),
-              ),
+                 child: Center(
+                    child: Column(
+              children:[
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(10, 50, 10, 550),
+                  child: Text(
+                    'EM DESENVOLVIMENTO',
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
+                ),
+                Container(
+                  width: largura,
+                  height: 50,
+                  margin: const EdgeInsets.only(top: 30),
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(
+                      color: Color(0xFF1A2F1C)),
+                  child: Text('copyright@2024 ArthurS e ArthurQ',
+                      style: GoogleFonts.faustina(
+                          textStyle: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 15))))
+              ],
             )))));
   }
 }

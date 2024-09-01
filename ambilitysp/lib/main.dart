@@ -34,14 +34,13 @@ class MainApp extends StatelessWidget {
                   style: GoogleFonts.jetBrainsMono(
                       textStyle: const TextStyle(color: Colors.white))),
               centerTitle: true,
-              backgroundColor: const Color.fromARGB(255, 0, 102, 51),
+              backgroundColor: const Color(0xFF113C13),
               iconTheme: const IconThemeData(color: Colors.white),
             ),
-            backgroundColor: const Color.fromARGB(
-                255, 77, 167, 104), // cor geral de fundo do aplicativo
+            backgroundColor: const Color(0xFF0E1A0F), // cor geral de fundo do aplicativo
             drawer: Drawer(
                 // inicio da barra lateral
-                backgroundColor: const Color.fromARGB(255, 4, 101, 60),
+                backgroundColor: const Color(0xFF172318),
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   children: [
@@ -220,7 +219,7 @@ class MainApp extends StatelessWidget {
                         alignment: Alignment.bottomLeft,
                         child: Container(
                             decoration: const BoxDecoration(
-                                color: Color.fromRGBO(115, 211, 107, 1),
+                                color: Color(0xFF3E8538),
                                 borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(20),
                                     bottomRight: Radius.circular(20))),
@@ -244,7 +243,7 @@ class MainApp extends StatelessWidget {
                   height: altura * 0.17,
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                   decoration: BoxDecoration(
-                      color: const Color.fromRGBO(57, 130, 79, 1),
+                      color: const Color(0xFF2E643E),
                       borderRadius: BorderRadius.circular(20)),
                   child: Text(
                       'Para evitar isso é nescessario cuidar de nosso lixo. Confira nosso menu lateral para mais informações',
@@ -261,7 +260,7 @@ class MainApp extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 30),
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
-                      color: Color.fromARGB(100, 53, 97, 58)),
+                      color: Color(0xFF1A2F1C)),
                   child: Text('copyright@2024 ArthurS e ArthurQ',
                       style: GoogleFonts.faustina(
                           textStyle: const TextStyle(
