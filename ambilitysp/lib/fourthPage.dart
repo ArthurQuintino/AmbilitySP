@@ -16,9 +16,10 @@ class FourthPage extends StatelessWidget {
   const FourthPage({super.key});
 
   @override
-  Widget build(BuildContext context) {// contador de altura da tela
-    final largura =
-        MediaQuery.of(context).size.width;
+  Widget build(BuildContext context) {
+    // contador de altura da tela
+    final altura = MediaQuery.of(context).size.height;
+    final largura = MediaQuery.of(context).size.width;
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -144,28 +145,51 @@ class FourthPage extends StatelessWidget {
                 )),
             body: SingleChildScrollView(
                 // adiciona scroll na aplicação
-                 child: Center(
+                child: Center(
                     child: Column(
-              children:[
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(10, 50, 10, 550),
+              children: [
+                Container(
+                  margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                  width: largura,
+                  height: 40,
+                  decoration: BoxDecoration(color: Color(0xFF3E8538)),
                   child: Text(
-                    'EM DESENVOLVIMENTO',
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    'Economia Circular',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.faustina(
+                        textStyle:
+                            const TextStyle(color: Colors.white, fontSize: 20)),
                   ),
                 ),
                 Container(
-                  width: largura,
-                  height: 50,
-                  margin: const EdgeInsets.only(top: 30),
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF1A2F1C)),
-                  child: Text('copyright@2024 ArthurS e ArthurQ',
-                      style: GoogleFonts.faustina(
+                  width: largura / 1.7,
+                  height: altura / 1.7,
+                  padding: const EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      color: const Color(0xFF2E643E),
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Text(
+                      'Basicamente é uma forma eficiente de se reutilizar produtos que antes iriam ser descartados para gerar novos produtos, um otimo exemplo são garrafas ou latinhas, em que muitas empresas grandes ja expoem isso nas proprias embalagens. \n\n '
+                      'Representação Grafica:',
+                      style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15))))
+                              color: Colors.white, fontSize: 20))),
+                ),
+                Image.asset(
+                  'images/EcoCirc.jpg',
+                  width: largura / 1.3,
+                  height: altura / 1.3,
+                ),
+                Container(
+                    width: largura,
+                    height: 50,
+                    margin: const EdgeInsets.only(top: 30),
+                    alignment: Alignment.center,
+                    decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
+                    child: Text('copyright@2024 ArthurS e ArthurQ',
+                        style: GoogleFonts.faustina(
+                            textStyle: const TextStyle(
+                                color: Colors.white, fontSize: 15))))
               ],
             )))));
   }
