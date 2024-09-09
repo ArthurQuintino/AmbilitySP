@@ -1,9 +1,12 @@
+// ignore: file_names
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/thirdPage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -14,6 +17,13 @@ void main() {
 
 class FourthPage extends StatelessWidget {
   const FourthPage({super.key});
+
+  Future<void> _launchURL() async {
+    final Uri url = Uri.parse('https://petesa.eng.ufba.br/blog/voce-sabe-o-que-e-economia-circular');
+    if (!await launchUrl(url)) {
+      throw Exception('Não foi possivel carregar: $url');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +162,7 @@ class FourthPage extends StatelessWidget {
                   margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
                   width: largura,
                   height: 40,
-                  decoration: BoxDecoration(color: Color(0xFF3E8538)),
+                  decoration: const BoxDecoration(color: Color(0xFF3E8538)),
                   child: Text(
                     'Economia Circular',
                     textAlign: TextAlign.center,
@@ -162,9 +172,9 @@ class FourthPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: largura / 1.7,
-                  height: altura / 1.7,
-                  padding: const EdgeInsets.all(30),
+                  width: largura / 1.3,
+                  height: altura / 1.5,
+                  padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: const Color(0xFF2E643E),
                       borderRadius: BorderRadius.circular(20)),
@@ -175,11 +185,27 @@ class FourthPage extends StatelessWidget {
                           textStyle: const TextStyle(
                               color: Colors.white, fontSize: 20))),
                 ),
+                const Gap(50),
                 Image.asset(
                   'images/EcoCirc.jpg',
                   width: largura / 1.3,
                   height: altura / 1.3,
                 ),
+                const Gap(50),
+                ElevatedButton(
+                  onPressed: _launchURL,
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all<Color>(const Color(0xFF39824F)),
+                    shape: WidgetStateProperty.all<OutlinedBorder>(RoundedRectangleBorder(
+                      borderRadius:BorderRadius.circular(20)
+                    ))
+                  ),
+                  child: Text('Fonte: Allen, 2018',
+                      style: GoogleFonts.jetBrainsMono(
+                          textStyle: const TextStyle(
+                              color: Colors.white, fontSize: 15))),
+                ),
+                const Gap(50),
                 Container(
                     width: largura,
                     height: 50,
@@ -189,7 +215,7 @@ class FourthPage extends StatelessWidget {
                     child: Text('copyright@2024 ArthurS e ArthurQ',
                         style: GoogleFonts.faustina(
                             textStyle: const TextStyle(
-                                color: Colors.white, fontSize: 15))))
+                                color: Colors.white, fontSize: 15)))),
               ],
             )))));
   }
