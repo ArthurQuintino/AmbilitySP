@@ -37,7 +37,8 @@ class MainApp extends StatelessWidget {
               backgroundColor: const Color(0xFF113C13),
               iconTheme: const IconThemeData(color: Colors.white),
             ),
-            backgroundColor: const Color(0xFF0E1A0F), // cor geral de fundo do aplicativo
+            backgroundColor:
+                const Color(0xFF0E1A0F), // cor geral de fundo do aplicativo
             drawer: Drawer(
                 // inicio da barra lateral
                 backgroundColor: const Color(0xFF172318),
@@ -259,8 +260,7 @@ class MainApp extends StatelessWidget {
                   height: 50,
                   margin: const EdgeInsets.only(top: 30),
                   alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF1A2F1C)),
+                  decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
                   child: Text('copyright@2024 ArthurS e ArthurQ',
                       style: GoogleFonts.faustina(
                           textStyle: const TextStyle(

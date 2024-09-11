@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/secondPage.dart';
@@ -16,9 +17,11 @@ class ThirdPage extends StatelessWidget {
   const ThirdPage({super.key});
 
   @override
-  Widget build(BuildContext context) { // contador de altura da tela
+  Widget build(BuildContext context) {
     final largura =
         MediaQuery.of(context).size.width; // contador de largura da tela
+    final altura =
+        MediaQuery.of(context).size.height; // contador de altura da tela
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -146,26 +149,66 @@ class ThirdPage extends StatelessWidget {
                 // adiciona scroll na aplicação
                 child: Center(
                     child: Column(
-              children:[
-                const Padding(
-                  padding: EdgeInsets.fromLTRB(10, 50, 10, 550),
-                  child: Text(
-                    'EM DESENVOLVIMENTO',
-                    style: TextStyle(color: Colors.white, fontSize: 15),
-                  ),
-                ),
+              children: [
+                const Gap(60),
                 Container(
-                  width: largura,
-                  height: 50,
-                  margin: const EdgeInsets.only(top: 30),
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF1A2F1C)),
-                  child: Text('copyright@2024 ArthurS e ArthurQ',
-                      style: GoogleFonts.faustina(
+                  width: largura / 1.3,
+                  height: 120,
+                  padding: const EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      color: const Color(0xFF2E643E),
+                      borderRadius: BorderRadius.circular(26)),
+                  child: Text('Pontos de coleta de lixo mais proximos de você:',
+                      textAlign: TextAlign.justify,
+                      style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15))))
+                              fontSize: 18, color: Colors.white))),
+                ),
+                const Gap(60),
+                Container(
+                    width: largura / 1.3,
+                    height: 550,
+                    decoration: BoxDecoration(
+                        color: const Color(0xFF2E643E),
+                        borderRadius: BorderRadius.circular(20))),
+                const Gap(60),
+                Container(
+                    width: largura / 1.3,
+                    height: 120,
+                    padding: const EdgeInsets.all(30),
+                    decoration: BoxDecoration(
+                        color: const Color(0xFF2E643E),
+                        borderRadius: BorderRadius.circular(26)),
+                    child: Text(
+                        'Materiais que podem ser descartados em segurança:',
+                        textAlign: TextAlign.justify,
+                        style: GoogleFonts.jetBrainsMono(
+                            textStyle: const TextStyle(
+                                fontSize: 18, color: Colors.white)))),
+                const Gap(50),
+                Container(
+                    width: largura / 1.3,
+                    height: 300,
+                    padding: const EdgeInsets.all(30),
+                    decoration: BoxDecoration(
+                        color: const Color(0xFF2E643E),
+                        borderRadius: BorderRadius.circular(26)),
+                    child: Text(
+                        ' Entulhos de Construção \r Moveis Velhos \r Metais \r Papel e Papelão \r Eletrônicos \r Pilhas e baterias usadas \r Pneus \r Óleo de cozinha',
+                        textAlign: TextAlign.justify,
+                        style: GoogleFonts.jetBrainsMono(
+                            textStyle: const TextStyle(
+                                fontSize: 18, color: Colors.white)))),
+                Container(
+                    width: largura,
+                    height: 50,
+                    margin: const EdgeInsets.only(top: 30),
+                    alignment: Alignment.center,
+                    decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
+                    child: Text('copyright@2024 ArthurS e ArthurQ',
+                        style: GoogleFonts.faustina(
+                            textStyle: const TextStyle(
+                                color: Colors.white, fontSize: 15))))
               ],
             )))));
   }

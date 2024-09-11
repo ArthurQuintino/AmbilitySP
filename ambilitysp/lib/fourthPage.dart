@@ -19,7 +19,8 @@ class FourthPage extends StatelessWidget {
   const FourthPage({super.key});
 
   Future<void> _launchURL() async {
-    final Uri url = Uri.parse('https://petesa.eng.ufba.br/blog/voce-sabe-o-que-e-economia-circular');
+    final Uri url = Uri.parse(
+        'https://petesa.eng.ufba.br/blog/voce-sabe-o-que-e-economia-circular');
     if (!await launchUrl(url)) {
       throw Exception('Não foi possivel carregar: $url');
     }
@@ -181,6 +182,7 @@ class FourthPage extends StatelessWidget {
                   child: Text(
                       'Basicamente é uma forma eficiente de se reutilizar produtos que antes iriam ser descartados para gerar novos produtos, um otimo exemplo são garrafas ou latinhas, em que muitas empresas grandes ja expoem isso nas proprias embalagens. \n\n '
                       'Representação Grafica:',
+                      textAlign: TextAlign.justify,
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
                               color: Colors.white, fontSize: 20))),
@@ -195,11 +197,11 @@ class FourthPage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: _launchURL,
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all<Color>(const Color(0xFF39824F)),
-                    shape: WidgetStateProperty.all<OutlinedBorder>(RoundedRectangleBorder(
-                      borderRadius:BorderRadius.circular(20)
-                    ))
-                  ),
+                      backgroundColor: WidgetStateProperty.all<Color>(
+                          const Color(0xFF39824F)),
+                      shape: WidgetStateProperty.all<OutlinedBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)))),
                   child: Text('Fonte: Allen, 2018',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(

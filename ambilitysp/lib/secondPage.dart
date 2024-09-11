@@ -157,7 +157,7 @@ class SecondPage extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                   child: Container(
-                      width: 470,
+                      width: largura / 1.3,
                       height: 200,
                       margin: const EdgeInsets.only(top: 25),
                       padding: const EdgeInsets.all(20),
@@ -179,7 +179,7 @@ class SecondPage extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
                     // container com descrição de Como descartar seu lixo corretamente
-                    width: 470,
+                    width: largura / 1.3,
                     height: 540,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -286,7 +286,7 @@ class SecondPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
-                    width: 470,
+                    width: largura / 1.3,
                     height: 130,
                     margin: const EdgeInsets.only(top: 20),
                     padding: const EdgeInsets.all(20),
@@ -305,8 +305,7 @@ class SecondPage extends StatelessWidget {
                   height: 110,
                   margin: const EdgeInsets.only(top: 30),
                   alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF3E8538)),
+                  decoration: const BoxDecoration(color: Color(0xFF3E8538)),
                   child: Text(
                       'Denuncie! Voce esta fazendo um favor\npara o meio ambiente e para a saúde da\npopulação!',
                       style: GoogleFonts.jetBrainsMono(
@@ -318,8 +317,7 @@ class SecondPage extends StatelessWidget {
                   height: 50,
                   margin: const EdgeInsets.only(top: 30),
                   alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFF1A2F1C)),
+                  decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
                   child: Text('copyright@2024 ArthurS e ArthurQ',
                       style: GoogleFonts.faustina(
                           textStyle: const TextStyle(
