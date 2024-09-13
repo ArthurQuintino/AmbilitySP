@@ -8,6 +8,7 @@ import 'package:gap/gap.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
+import 'package:ambilitysp/fifthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -147,6 +148,19 @@ class MainApp extends StatelessWidget {
                         width: 40,
                       ),
                     ),
+                    ListTile(
+                      title: Text('Economia Circular',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const fiftyPage()), // caminho para a quarta pagina
+                        );
+                      },
+                    )
                   ],
                 )),
             body: SingleChildScrollView(
