@@ -12,7 +12,6 @@ class calculadoraCarbono extends calculadora{
   calculadoraCarbono(super.kilos, super.materiais, this.carbono);
 
   void calcularCarbono(){
-     
   }
 }
 

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
+import 'package:ambilitysp/coleta.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -15,10 +16,14 @@ void main() {
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     double largura = MediaQuery.of(context).size.width;
+    Localcoleta local = Localcoleta(2, 'teste');
+    String EstaDisponivel = local.disponibilidade();
+
 
     return MaterialApp(
       home: Scaffold(
@@ -175,6 +180,7 @@ class SecondPage extends StatelessWidget {
                                   fontSize:
                                       15))))), //primeiro container, contém as informações sobre dias de coleta
               const Gap(15), // espaçamento
+              Text('$EstaDisponivel'),
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(

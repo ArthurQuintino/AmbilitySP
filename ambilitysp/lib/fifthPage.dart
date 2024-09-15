@@ -10,7 +10,6 @@ import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/main.dart';
 
-
 void mfi() {
   runApp(const MaterialApp(
     title: "App",
@@ -23,11 +22,13 @@ class fiftyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    double altura =
-        MediaQuery.of(context).size.height;
+    double altura = MediaQuery.of(context).size.height;
 
     double largura = MediaQuery.of(context).size.width;
+
+    //variaveis locais para receber os kilos
+
+    double kg = 0;
 
     return MaterialApp(
       home: Scaffold(
@@ -168,17 +169,68 @@ class fiftyPage extends StatelessWidget {
                 width: largura,
                 height: 40,
                 color: Color(0xFF3E8538),
-                child: Text(
-                  'Cotação dos Materiais Reciclaveis',  
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.faustina(
-                        textStyle:
-                            const TextStyle(color: Colors.white, fontSize: 20))
-                ),                
+                child: Text('Cotação dos Materiais Reciclaveis',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.faustina(
+                        textStyle: const TextStyle(
+                            color: Colors.white, fontSize: 20))),
               ),
               Container(
-                width: largura * 0.8,
-                height: altura * 0.3,
+                width: largura * 0.8, 
+                height: altura * 0.3, 
+                color: const Color(0xFF2E643E),
+                padding: const EdgeInsets.all(20),
+                child: ListView(
+                )
+              ),
+              Gap(20),
+              Container(
+                width: largura,
+                height: 50,
+                color: Color(0xFF3E8538),
+                child: Text('Cotação dos Materiais Reciclaveis',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.faustina(
+                        textStyle: const TextStyle(
+                            color: Colors.white, fontSize: 20))),
+
+              ),
+              Gap(20),
+              Container(
+                width: largura * 0.8, 
+                height: altura * 0.3, 
+                color: const Color(0xFF2E643E),
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children:<Widget> [
+                    Text('Calculadora De Ganhos',style: GoogleFonts.jetBrainsMono(
+                        textStyle: const TextStyle(
+                            color: Colors.white, fontSize: 20))),
+                    TextField(
+                      cursorColor: Colors.white,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xFF204029),
+                        hintText: 'Insira a quantidade de peso (KG)',
+                        hintStyle: TextStyle(
+                          color: Colors.white
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide.none
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide.none
+                        )
+                       
+                      ),
+                      style: TextStyle(
+                        color: Colors.white
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
