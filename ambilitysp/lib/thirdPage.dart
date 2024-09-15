@@ -205,7 +205,7 @@ class ThirdPage extends StatelessWidget {
                     margin: const EdgeInsets.only(top: 30),
                     alignment: Alignment.center,
                     decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
-                    child: Text('copyright@2024 ArthurS e ArthurQ',
+                    child: Text('copyright@2024 Alexandre e ArthurQ',
                         style: GoogleFonts.faustina(
                             textStyle: const TextStyle(
                                 color: Colors.white, fontSize: 15))))
