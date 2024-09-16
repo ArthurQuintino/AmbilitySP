@@ -156,6 +156,16 @@ class fiftyPage extends StatelessWidget {
                     width: 40,
                   ),
                 ),
+                ListTile(
+                      title: Text('Calculadora de Carbono',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {},
+                      leading: const Image(
+                        image: AssetImage('images/co2.png'),
+                        width: 40,
+                      ),
+                    )
               ],
             )),
         body: SingleChildScrollView(

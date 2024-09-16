@@ -9,9 +9,9 @@ class Localcoleta {
     final dataAgora = DateTime.timestamp();
     final horaAgora = dataAgora.hour;
     if (horaAgora > 7 && horaAgora < 13) {
-      disponivel = 'Disponivel';
+      disponivel = 'Está disponivel';
     } else {
-      disponivel = 'Não Disponivel';
+      disponivel = 'Não está disponivel';
     }
     return disponivel;
   }

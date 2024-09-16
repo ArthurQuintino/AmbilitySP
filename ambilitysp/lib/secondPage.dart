@@ -179,17 +179,28 @@ class SecondPage extends StatelessWidget {
                         color: const Color(0xFF2E643E),
                         borderRadius: BorderRadius.circular(26),
                       ),
-                      child: Text(
-                          'Dias de coleta seletiva:\n\n'
-                          'Região norte litorânea: todas as quintas e terças\n'
-                          'Região sul litorânea: todas as sextas e quartas\n',
-                          style: GoogleFonts.jetBrainsMono(
-                              textStyle: const TextStyle(
-                                  color: Colors.white,
-                                  fontSize:
-                                      15))))), //primeiro container, contém as informações sobre dias de coleta
+                      child: RichText(
+                          text: TextSpan(
+                              text: 'Dias de coleta seletiva:\n\n'
+                                  'Região norte litorânea: todas as quintas e terças\n'
+                                  'Região sul litorânea: todas as sextas e quartas\n'
+                                  'Atualmente em sua Região ',
+                              style: GoogleFonts.jetBrainsMono(
+                                  textStyle:
+                                      const TextStyle(color: Colors.white)),
+                              children: <TextSpan>[
+                            if(EstaDisponivel.length == 19)
+                            TextSpan(
+                              
+                                text: '$EstaDisponivel',
+                                style: GoogleFonts.jetBrainsMono(
+                                    textStyle: TextStyle(
+                                        color: EstaDisponivel.length == 19 ? Colors.red : Colors.green,
+                                        fontWeight: FontWeight.bold)))
+                          ])))),
+
+              //primeiro container, contém as informações sobre dias de coleta
               const Gap(15), // espaçamento
-              Text('$EstaDisponivel'),
               Padding(
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
