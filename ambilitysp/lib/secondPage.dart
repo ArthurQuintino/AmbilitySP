@@ -6,6 +6,7 @@ import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/coleta.dart';
+import 'package:ambilitysp/fifthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -16,14 +17,12 @@ void main() {
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
     double largura = MediaQuery.of(context).size.width;
     Localcoleta local = Localcoleta(2, 'teste');
     String EstaDisponivel = local.disponibilidade();
-
 
     return MaterialApp(
       home: Scaffold(
@@ -70,14 +69,7 @@ class SecondPage extends StatelessWidget {
                   title: Text('Dias de coleta seletiva',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const SecondPage()), // caminho para a segunda pagina
-                    );
-                  },
+                  onTap: () {}, // caminho para a segunda pagina
                   leading: const Image(
                     image: AssetImage('images/calendar.png'),
                     width: 40,
@@ -92,7 +84,7 @@ class SecondPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              const ThirdPage()), // caminho para a terceira pagina
+                              const ThirdPage()), // caminho para a Terceira pagina
                     );
                   },
                   leading: const Image(
@@ -151,6 +143,23 @@ class SecondPage extends StatelessWidget {
                     width: 40,
                   ),
                 ),
+                ListTile(
+                  title: Text('Calculadora de Carbono',
+                      style: GoogleFonts.jetBrainsMono(
+                          textStyle: const TextStyle(color: Colors.white))),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const fiftyPage()), // caminho para a quarta pagina
+                    );
+                  },
+                  leading: const Image(
+                    image: AssetImage('images/co2.png'),
+                    width: 40,
+                  ),
+                )
               ],
             )),
         body: SingleChildScrollView(

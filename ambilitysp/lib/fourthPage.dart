@@ -7,6 +7,7 @@ import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:ambilitysp/fifthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -100,7 +101,7 @@ class FourthPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const ThirdPage()), // caminho para a terceira pagina
+                                  const ThirdPage()), // caminho para a Terceira pagina
                         );
                       },
                       leading: const Image(
@@ -152,6 +153,23 @@ class FourthPage extends StatelessWidget {
                         width: 40,
                       ),
                     ),
+                    ListTile(
+                      title: Text('Calculadora de Carbono',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const fiftyPage()), // caminho para a quarta pagina
+                        );
+                      },
+                      leading: const Image(
+                        image: AssetImage('images/co2.png'),
+                        width: 40,
+                      ),
+                    )
                   ],
                 )),
             body: SingleChildScrollView(

@@ -10,7 +10,7 @@ import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/main.dart';
 
-void mfi() {
+void main() {
   runApp(const MaterialApp(
     title: "App",
     home: fiftyPage(),
@@ -28,7 +28,7 @@ class fiftyPage extends StatelessWidget {
 
     //variaveis locais para receber os kilos
 
-    double kg = 0;
+    // double kg = 0;
 
     return MaterialApp(
       home: Scaffold(
@@ -176,13 +176,11 @@ class fiftyPage extends StatelessWidget {
                             color: Colors.white, fontSize: 20))),
               ),
               Container(
-                width: largura * 0.8, 
-                height: altura * 0.3, 
-                color: const Color(0xFF2E643E),
-                padding: const EdgeInsets.all(20),
-                child: ListView(
-                )
-              ),
+                  width: largura * 0.8,
+                  height: altura * 0.3,
+                  color: const Color(0xFF2E643E),
+                  padding: const EdgeInsets.all(20),
+                  child: ListView()),
               Gap(20),
               Container(
                 width: largura,
@@ -193,55 +191,47 @@ class fiftyPage extends StatelessWidget {
                     style: GoogleFonts.faustina(
                         textStyle: const TextStyle(
                             color: Colors.white, fontSize: 20))),
-
               ),
               Gap(20),
               Container(
-                width: largura * 0.8, 
-                height: altura * 0.3, 
+                width: largura * 0.8,
+                height: altura * 0.3,
                 color: const Color(0xFF2E643E),
                 padding: const EdgeInsets.all(20),
                 child: Column(
-                  children:<Widget> [
-                    Text('Calculadora De Ganhos',style: GoogleFonts.jetBrainsMono(
-                        textStyle: const TextStyle(
-                            color: Colors.white, fontSize: 20))),
+                  children: <Widget>[
+                    Text('Calculadora De Ganhos',
+                        style: GoogleFonts.jetBrainsMono(
+                            textStyle: const TextStyle(
+                                color: Colors.white, fontSize: 20))),
                     TextField(
                       cursorColor: Colors.white,
                       decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Color(0xFF204029),
-                        hintText: 'Insira a quantidade de peso (KG)',
-                        hintStyle: TextStyle(
-                          color: Colors.white
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide.none
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide.none
-                        )
-                       
-                      ),
-                      style: TextStyle(
-                        color: Colors.white
-                      ),
+                          filled: true,
+                          fillColor: Color(0xFF204029),
+                          hintText: 'Insira a quantidade de peso (KG)',
+                          hintStyle: TextStyle(color: Colors.white),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide.none),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide.none)),
+                      style: TextStyle(color: Colors.white),
                     )
                   ],
                 ),
               ),
               Container(
-                    width: largura,
-                    height: 50,
-                    margin: const EdgeInsets.only(top: 30),
-                    alignment: Alignment.center,
-                    decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
-                    child: Text('copyright@2024 Alexandre e ArthurQ',
-                        style: GoogleFonts.faustina(
-                            textStyle: const TextStyle(
-                                color: Colors.white, fontSize: 15))))
+                  width: largura,
+                  height: 50,
+                  margin: const EdgeInsets.only(top: 30),
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(color: Color(0xFF1A2F1C)),
+                  child: Text('copyright@2024 Alexandre e ArthurQ',
+                      style: GoogleFonts.faustina(
+                          textStyle: const TextStyle(
+                              color: Colors.white, fontSize: 15))))
             ],
           ),
         )),

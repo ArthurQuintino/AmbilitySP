@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
+import 'package:ambilitysp/fifthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -20,8 +20,7 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final largura =
         MediaQuery.of(context).size.width; // contador de largura da tela
-    final altura =
-        MediaQuery.of(context).size.height; // contador de altura da tela
+    //final altura = MediaQuery.of(context).size.height; // contador de altura da tela
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -86,7 +85,14 @@ class ThirdPage extends StatelessWidget {
                       title: Text('Pontos de Coleta de Lixo',
                           style: GoogleFonts.jetBrainsMono(
                               textStyle: const TextStyle(color: Colors.white))),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ThirdPage()), // caminho para a Terceira pagina
+                        );
+                      },
                       leading: const Image(
                         image: AssetImage('images/map.png'),
                         width: 40,
@@ -143,6 +149,23 @@ class ThirdPage extends StatelessWidget {
                         width: 40,
                       ),
                     ),
+                    ListTile(
+                      title: Text('Calculadora de Carbono',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const fiftyPage()), // caminho para a quarta pagina
+                        );
+                      },
+                      leading: const Image(
+                        image: AssetImage('images/co2.png'),
+                        width: 40,
+                      ),
+                    )
                   ],
                 )),
             body: SingleChildScrollView(

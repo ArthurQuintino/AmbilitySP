@@ -5,12 +5,12 @@ class Localcoleta {
 
   Localcoleta(this.id_coleta, this.endereco);
 
-  String disponibilidade () {
+  String disponibilidade() {
     final dataAgora = DateTime.timestamp();
     final horaAgora = dataAgora.hour;
-    if(horaAgora > 7 && horaAgora < 13){
+    if (horaAgora > 7 && horaAgora < 13) {
       disponivel = 'Disponivel';
-    }else{
+    } else {
       disponivel = 'Não Disponivel';
     }
     return disponivel;

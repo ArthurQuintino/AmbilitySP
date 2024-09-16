@@ -149,7 +149,7 @@ class MainApp extends StatelessWidget {
                       ),
                     ),
                     ListTile(
-                      title: Text('Economia Circular',
+                      title: Text('Calculadora de Carbono',
                           style: GoogleFonts.jetBrainsMono(
                               textStyle: const TextStyle(color: Colors.white))),
                       onTap: () {
@@ -160,6 +160,10 @@ class MainApp extends StatelessWidget {
                                   const fiftyPage()), // caminho para a quarta pagina
                         );
                       },
+                      leading: const Image(
+                        image: AssetImage('images/co2.png'),
+                        width: 40,
+                      ),
                     )
                   ],
                 )),

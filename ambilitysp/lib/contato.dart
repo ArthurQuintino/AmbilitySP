@@ -5,22 +5,20 @@ class Contato {
   final String telefone2 = 'Orgão estadual litoraneo: (13)3344-9400';
   final String Tel1 = 'tel:11962649955';
   final String Endereco;
-  final String Email =  'svmagtpae@prefeitura.sp.gov.br';
+  final String Email = 'svmagtpae@prefeitura.sp.gov.br';
 
-  Contato( this.Endereco);
+  Contato(this.Endereco);
 
-  void redirecionamentoTel() async{
-
+  void redirecionamentoTel() async {
     if (await canLaunchUrl(Uri.parse(Tel1))) {
       await launchUrl(Uri.parse(Tel1));
     } else {
       throw 'Não foi Possivel ligar para $Tel1';
     }
-
   }
-   void redirecionamentoEmail() async{
 
-     final Uri params = Uri(
+  void redirecionamentoEmail() async {
+    final Uri params = Uri(
       scheme: 'mailto',
       path: Email,
     );
@@ -30,6 +28,5 @@ class Contato {
     } else {
       throw 'Não foi Possivel mandar email para $url';
     }
-
   }
 }
