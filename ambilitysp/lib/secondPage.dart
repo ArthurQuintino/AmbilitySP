@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
@@ -6,6 +7,7 @@ import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/coleta.dart';
+import 'package:ambilitysp/contato.dart';
 import 'package:ambilitysp/fifthPage.dart';
 
 void main() {
@@ -23,7 +25,8 @@ class SecondPage extends StatelessWidget {
     double largura = MediaQuery.of(context).size.width;
     Localcoleta local = Localcoleta(2, 'teste');
     String EstaDisponivel = local.disponibilidade();
-
+    final Contato contato = Contato('11944751692', '11962649955',
+        'R. Delphim Moreira, 56 - Embaré, Santos', 'cfb.santos@sp.gov.br');
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -189,13 +192,13 @@ class SecondPage extends StatelessWidget {
                                   textStyle:
                                       const TextStyle(color: Colors.white)),
                               children: <TextSpan>[
-                            if(EstaDisponivel.length == 19)
                             TextSpan(
-                              
-                                text: '$EstaDisponivel',
+                                text: EstaDisponivel,
                                 style: GoogleFonts.jetBrainsMono(
                                     textStyle: TextStyle(
-                                        color: EstaDisponivel.length == 19 ? Colors.red : Colors.green,
+                                        color: EstaDisponivel.length > 19
+                                            ? Colors.red
+                                            : Colors.green,
                                         fontWeight: FontWeight.bold)))
                           ])))),
 
@@ -310,22 +313,91 @@ class SecondPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
-                child: Container(
-                    width: largura / 1.3,
-                    height: 130,
-                    margin: const EdgeInsets.only(top: 20),
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: const Color(0xFF2E643E),
-                        borderRadius: BorderRadius.circular(26)),
-                    child: Text(
-                        'Telefones:\nIbama: 0800 618080\nOrgão estadual litoraneo: (13)3344-9400',
-                        style: GoogleFonts.jetBrainsMono(
-                            textStyle: const TextStyle(
-                          color: Colors.white,
-                        )))), //terceiro container, seção de denúncias
-              ),
+                  padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
+                  child: Container(
+                      width: largura / 1.3,
+                      height: 130,
+                      margin: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF2E643E),
+                          borderRadius: BorderRadius.circular(26)),
+                      child: RichText(
+                          text: TextSpan(
+                              text: 'Lista de Contato: \n',
+                              style: GoogleFonts.jetBrainsMono(
+                                  textStyle:
+                                      const TextStyle(color: Colors.white)),
+                              children: <TextSpan>[
+                            TextSpan(
+                              text: 'Ibama:  ',
+                              style: GoogleFonts.jetBrainsMono(
+                                textStyle: const TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            TextSpan(
+                                text: contato.telefone,
+                                style: GoogleFonts.jetBrainsMono(
+                                  textStyle: const TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 135, 250, 169)),
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    contato.redirecionamentoTel();
+                                  }),
+                            TextSpan(
+                              text: '\nOrgão estadual litoraneo:  ',
+                              style: GoogleFonts.jetBrainsMono(
+                                textStyle: const TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            TextSpan(
+                                text: contato.telefone2,
+                                style: GoogleFonts.jetBrainsMono(
+                                  textStyle: const TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 135, 250, 169)),
+                                ),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    contato.redirecionamentoTel();
+                                  }),
+                            TextSpan(
+                                text:
+                                    '\nCETESB - Agência Ambiental de Santos:  ',
+                                style: GoogleFonts.jetBrainsMono(
+                                  textStyle:
+                                      const TextStyle(color: Colors.white),
+                                )),
+                            TextSpan(
+                                text: contato.Endereco,
+                                style: GoogleFonts.jetBrainsMono(
+                                    textStyle: const TextStyle(
+                                        color: Color.fromARGB(
+                                            255, 135, 250, 169))),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    contato.redirecionamentoMaps();
+                                  }),
+                            TextSpan(
+                                text: '\nEmail de contato CTR Santos  ',
+                                style: GoogleFonts.jetBrainsMono(
+                                  textStyle:
+                                      const TextStyle(color: Colors.white),
+                                )),
+                            TextSpan(
+                                text: contato.Email,
+                                style: GoogleFonts.jetBrainsMono(
+                                    textStyle: const TextStyle(
+                                        color: Color.fromARGB(
+                                            255, 135, 250, 169))),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    contato.redirecionamentoEmail();
+                                  }),
+                          ])))), //terceiro container, seção de denúncias
+
               Container(
                   width: largura,
                   height: 110,
