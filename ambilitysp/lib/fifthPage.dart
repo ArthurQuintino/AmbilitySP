@@ -8,6 +8,7 @@ import 'package:gap/gap.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
+import 'package:ambilitysp/calculdora.dart';
 import 'package:ambilitysp/main.dart';
 
 void main() {
@@ -29,6 +30,12 @@ class fiftyPage extends StatelessWidget {
     //variaveis locais para receber os kilos
 
     // double kg = 0;
+
+    List<calculadoraGanhos> calculadoraGanho = [
+      calculadoraGanhos("Borracha", 3.0),
+      calculadoraGanhos("Plastico", 4.0),
+      calculadoraGanhos("Aluminio", 6.0)
+    ];
 
     return MaterialApp(
       home: Scaffold(
@@ -190,7 +197,11 @@ class fiftyPage extends StatelessWidget {
                   height: altura * 0.3,
                   color: const Color(0xFF2E643E),
                   padding: const EdgeInsets.all(20),
-                  child: ListView()),
+                  child: ListView.builder(itemCount: calculadoraGanho.length, itemBuilder:(context, index) {
+                    return ListTile(
+                      title: Text(calculadoraGanho[index].materiais)
+                    );
+                  } ,)),
               Gap(20),
               Container(
                 width: largura,

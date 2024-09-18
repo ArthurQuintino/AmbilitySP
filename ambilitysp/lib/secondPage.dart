@@ -25,7 +25,7 @@ class SecondPage extends StatelessWidget {
     double largura = MediaQuery.of(context).size.width;
     Localcoleta local = Localcoleta(2, 'teste');
     String EstaDisponivel = local.disponibilidade();
-    final Contato contato = Contato('11944751692', '11962649955',
+    final Contato contato = Contato('tel:11944751692', 'tel:11962649955',
         'R. Delphim Moreira, 56 - Embaré, Santos', 'cfb.santos@sp.gov.br');
     return MaterialApp(
       home: Scaffold(
