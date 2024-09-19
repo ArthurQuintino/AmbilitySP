@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gap/gap.dart';
@@ -18,24 +19,41 @@ void main() {
   ));
 }
 
-class fiftyPage extends StatelessWidget {
+class fiftyPage extends StatefulWidget {
   const fiftyPage({super.key});
+  @override
+  State<fiftyPage> createState() => _fiftyPageState();
+}
 
+double quilos = 0;
+double materialselecionado = 0.0;
+double resultado = 0;
+String nomematerialsecionado = '';
+
+List<calculadoraGanhos> calculadoraGanho = [
+  calculadoraGanhos("Borracha", 3.0),
+  calculadoraGanhos("Plastico", 4.0),
+  calculadoraGanhos("Aluminio", 6.0),
+];
+
+class _fiftyPageState extends State<fiftyPage> {
   @override
   Widget build(BuildContext context) {
     double altura = MediaQuery.of(context).size.height;
-
     double largura = MediaQuery.of(context).size.width;
 
-    //variaveis locais para receber os kilos
+    final ButtonStyle style =
+        ElevatedButton.styleFrom(backgroundColor: Color(0xFF1A8438));
+    final ButtonStyle style2 =
+        ElevatedButton.styleFrom(backgroundColor: Color(0xFF232323));
 
-    // double kg = 0;
-
-    List<calculadoraGanhos> calculadoraGanho = [
-      calculadoraGanhos("Borracha", 3.0),
-      calculadoraGanhos("Plastico", 4.0),
-      calculadoraGanhos("Aluminio", 6.0)
-    ];
+    void calcularGanhos() {
+      if (materialselecionado != 0 && quilos > 0) {
+        setState(() {
+          resultado = quilos * materialselecionado;
+        });
+      }
+    }
 
     return MaterialApp(
       home: Scaffold(
@@ -181,6 +199,46 @@ class fiftyPage extends StatelessWidget {
           child: Column(
             // coluna principal
             children: [
+              const Gap(20),
+              Container(
+                width: largura,
+                height: 40,
+                color: const Color(0xFF3E8538),
+                child: Text('Cotação dos Materiais Reciclaveis',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.faustina(
+                        textStyle: const TextStyle(
+                            color: Colors.white, fontSize: 20))),
+              ),
+              const Gap(20),
+              Container(
+                  width: largura * 0.8,
+                  height: altura * 0.3,
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                      color: const Color(0xFF2E643E),
+                      borderRadius: BorderRadius.circular(20)),
+                  child: ListView.builder(
+                    itemCount: calculadoraGanho.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(calculadoraGanho[index].materiais,
+                                style: GoogleFonts.jetBrainsMono(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white, fontSize: 15))),
+                            Text(
+                                'R\$ ${calculadoraGanho[index].cotacao.toStringAsFixed(2)} P/Kg',
+                                style: GoogleFonts.jetBrainsMono(
+                                    textStyle: const TextStyle(
+                                        color: Colors.white, fontSize: 15)))
+                          ],
+                        ),
+                      );
+                    },
+                  )),
               Gap(20),
               Container(
                 width: largura,
@@ -192,53 +250,114 @@ class fiftyPage extends StatelessWidget {
                         textStyle: const TextStyle(
                             color: Colors.white, fontSize: 20))),
               ),
-              Container(
-                  width: largura * 0.8,
-                  height: altura * 0.3,
-                  color: const Color(0xFF2E643E),
-                  padding: const EdgeInsets.all(20),
-                  child: ListView.builder(itemCount: calculadoraGanho.length, itemBuilder:(context, index) {
-                    return ListTile(
-                      title: Text(calculadoraGanho[index].materiais)
-                    );
-                  } ,)),
-              Gap(20),
-              Container(
-                width: largura,
-                height: 50,
-                color: Color(0xFF3E8538),
-                child: Text('Cotação dos Materiais Reciclaveis',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.faustina(
-                        textStyle: const TextStyle(
-                            color: Colors.white, fontSize: 20))),
-              ),
-              Gap(20),
+              const Gap(20),
               Container(
                 width: largura * 0.8,
-                height: altura * 0.3,
-                color: const Color(0xFF2E643E),
+                height: altura / 1.4,
                 padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                    color: const Color(0xFF2E643E),
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   children: <Widget>[
-                    Text('Calculadora De Ganhos',
-                        style: GoogleFonts.jetBrainsMono(
-                            textStyle: const TextStyle(
-                                color: Colors.white, fontSize: 20))),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text('Calculadora De Ganhos',
+                          style: GoogleFonts.faustina(
+                              textStyle: const TextStyle(
+                                  color: Colors.white, fontSize: 22))),
+                    ),
+                    const Gap(20),
+                    TextField(
+                        cursorColor: Colors.white,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: const Color(0xFF204029),
+                            hintText: 'Insira a quantidade de peso (KG)',
+                            hintStyle: const TextStyle(color: Colors.white),
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide.none),
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide.none)),
+                        style: const TextStyle(color: Colors.white),
+                        onChanged: (value) {
+                          setState(() {
+                            quilos = double.tryParse(value) ?? 0;
+                          });
+                          <TextInputFormatter>[
+                            FilteringTextInputFormatter
+                                .digitsOnly // codigo para limitar a digitar apenas numeros
+                          ];
+                        }),
+                    const Gap(20),
+                    Expanded(
+                        child: ListView.builder(
+                      itemCount: calculadoraGanho.length,
+                      padding: const EdgeInsets.all(15),
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      itemBuilder: (BuildContext ctx, index) {
+                        return Card(
+                            child: ListTile(
+                          title: Text(calculadoraGanho[index].materiais),
+                          onTap: () {
+                            setState(() {
+                              materialselecionado =
+                                  calculadoraGanho[index].cotacao;
+                              nomematerialsecionado =
+                                  calculadoraGanho[index].materiais;
+                            });
+                          },
+                        ));
+                      },
+                    )),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton(
+                          style: style2,
+                          onPressed: () {},
+                          child: Text(
+                            'Limpar',
+                            style: GoogleFonts.jetBrainsMono(
+                                textStyle: const TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                          ),
+                        ),
+                        ElevatedButton(
+                          style: style,
+                          onPressed: () {
+                            calcularGanhos();
+                          },
+                          child: Text(
+                            'Calcular',
+                            style: GoogleFonts.jetBrainsMono(
+                                textStyle: const TextStyle(
+                                    color: Colors.white, fontSize: 12)),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Gap(40),
                     TextField(
                       cursorColor: Colors.white,
+                      readOnly: true,
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                           filled: true,
-                          fillColor: Color(0xFF204029),
-                          hintText: 'Insira a quantidade de peso (KG)',
-                          hintStyle: TextStyle(color: Colors.white),
+                          hintText:
+                              'Resultado: R\$ ${resultado.toStringAsFixed(2)} para $nomematerialsecionado',
+                          fillColor: const Color(0xFF204029),
+                          hintStyle: const TextStyle(color: Colors.white),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide.none),
                           enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide.none)),
-                      style: TextStyle(color: Colors.white),
                     )
                   ],
                 ),

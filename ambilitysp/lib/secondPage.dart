@@ -23,6 +23,7 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double largura = MediaQuery.of(context).size.width;
+    double altura = MediaQuery.of(context).size.width;
     Localcoleta local = Localcoleta(2, 'teste');
     String EstaDisponivel = local.disponibilidade();
     final Contato contato = Contato('tel:11944751692', 'tel:11962649955',
@@ -174,7 +175,7 @@ class SecondPage extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                   child: Container(
-                      width: largura / 1.3,
+                      width: largura / 1.15,
                       height: 200,
                       margin: const EdgeInsets.only(top: 25),
                       padding: const EdgeInsets.all(20),
@@ -208,7 +209,7 @@ class SecondPage extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
                     // container com descrição de Como descartar seu lixo corretamente
-                    width: largura / 1.3,
+                    width: largura / 1.15,
                     height: 540,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -315,8 +316,8 @@ class SecondPage extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                   child: Container(
-                      width: largura / 1.3,
-                      height: 130,
+                      width: largura / 1.15,
+                      height: altura / 1.76,
                       margin: const EdgeInsets.only(top: 20),
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(

@@ -192,7 +192,7 @@ class FourthPage extends StatelessWidget {
                 ),
                 Container(
                   width: largura / 1.3,
-                  height: altura / 1.5,
+                  height: altura / 1.75,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: const Color(0xFF2E643E),
@@ -203,15 +203,17 @@ class FourthPage extends StatelessWidget {
                       textAlign: TextAlign.justify,
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
-                              color: Colors.white, fontSize: 20))),
+                              color: Colors.white, fontSize: 16))),
                 ),
-                const Gap(50),
-                Image.asset(
-                  'images/EcoCirc.jpg',
+                const Gap(10),
+                Container(
                   width: largura / 1.3,
-                  height: altura / 1.3,
+                  height: altura / 2.5,
+                  child: Image.asset(
+                    'images/EcoCirc.jpg',
+                  ),
                 ),
-                const Gap(50),
+                const Gap(10),
                 ElevatedButton(
                   onPressed: _launchURL,
                   style: ButtonStyle(
@@ -225,7 +227,6 @@ class FourthPage extends StatelessWidget {
                           textStyle: const TextStyle(
                               color: Colors.white, fontSize: 15))),
                 ),
-                const Gap(50),
                 Container(
                     width: largura,
                     height: 50,
