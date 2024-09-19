@@ -1,5 +1,6 @@
 // ignore: file_names
 
+import 'package:ambilitysp/sixthPage.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -154,6 +155,23 @@ class FourthPage extends StatelessWidget {
                       ),
                     ),
                     ListTile(
+                      title: Text('Calculadora de Ganhos',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const fifthPage()), // caminho para a quarta pagina
+                        );
+                      },
+                      leading: const Image(
+                        image: AssetImage('images/calculator.png'),
+                        width: 40,
+                      ),
+                    ),
+                    ListTile(
                       title: Text('Calculadora de Carbono',
                           style: GoogleFonts.jetBrainsMono(
                               textStyle: const TextStyle(color: Colors.white))),
@@ -162,7 +180,7 @@ class FourthPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const fiftyPage()), // caminho para a quarta pagina
+                                  const sixthPage()), // caminho para a ultima pagina
                         );
                       },
                       leading: const Image(

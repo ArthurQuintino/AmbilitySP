@@ -15,14 +15,14 @@ import 'package:ambilitysp/main.dart';
 void main() {
   runApp(const MaterialApp(
     title: "App",
-    home: fifthPage(),
+    home: sixthPage(),
   ));
 }
 
-class fifthPage extends StatefulWidget {
-  const fifthPage({super.key});
+class sixthPage extends StatefulWidget {
+  const sixthPage({super.key});
   @override
-  State<fifthPage> createState() => _fifthPageState();
+  State<sixthPage> createState() => _SixthPageState();
 }
 
 double quilos = 0;
@@ -30,47 +30,56 @@ double materialselecionado = 0.0;
 double resultado = 0;
 String nomematerialsecionado = '';
 
-List<calculadoraGanhos> calculadoraGanho = [
+List<calculadoraGanhos> calculadoraCarbono = [
   calculadoraGanhos("Borracha", 2.5),
-  calculadoraGanhos("Plástico", 1.2),
-  calculadoraGanhos("Alumínio", 5.0),
-  calculadoraGanhos("Cobre", 25.0),
-  calculadoraGanhos("Ferro", 2.5),
-  calculadoraGanhos("Vidro", 1.5),
-  calculadoraGanhos("Papelão", 0.75),
-  calculadoraGanhos("Chumbo", 10.0),
-  calculadoraGanhos("Aço", 8.0),
-  calculadoraGanhos("Latão", 7.5),
-  calculadoraGanhos("Ouro", 280.0),
-  calculadoraGanhos("Prata", 15.0),
-  calculadoraGanhos("Níquel", 18.0),
-  calculadoraGanhos("Zinco", 2.0),
-  calculadoraGanhos("Bronze", 6.5),
-  calculadoraGanhos("Magnésio", 9.0),
-  calculadoraGanhos("Titânio", 30.0),
-  calculadoraGanhos("Chapa de aço", 2.8),
-  calculadoraGanhos("Fios de cobre", 27.0),
-  calculadoraGanhos("Baterias", 12.0),
-  calculadoraGanhos("Polietileno", 1.8),
-  calculadoraGanhos("Polipropileno", 1.5),
-  calculadoraGanhos("Poliestireno", 2.0),
-  calculadoraGanhos("PVC", 1.6),
-  calculadoraGanhos("Silicone", 4.0),
-  calculadoraGanhos("Fibra de vidro", 3.0),
+  calculadoraGanhos("Plástico", 6.0),
+  calculadoraGanhos("Alumínio", 4.0),
+  calculadoraGanhos("Cobre", 15.0),
+  calculadoraGanhos("Ferro", 2.0),
+  calculadoraGanhos("Vidro", 0.7),
+  calculadoraGanhos("Papelão", 0.4),
+  calculadoraGanhos("Chumbo", 9.0),
+  calculadoraGanhos("Aço", 1.0),
+  calculadoraGanhos("Latão", 3.5),
+  calculadoraGanhos("Ouro", 100.0),
+  calculadoraGanhos("Prata", 7.0),
+  calculadoraGanhos("Níquel", 12.0),
+  calculadoraGanhos("Zinco", 1.5),
+  calculadoraGanhos("Bronze", 5.0),
+  calculadoraGanhos("Magnésio", 6.0),
+  calculadoraGanhos("Titânio", 20.0),
+  calculadoraGanhos("Chapa de aço", 1.5),
+  calculadoraGanhos("Fios de cobre", 22.0),
+  calculadoraGanhos("Baterias", 8.0),
+  calculadoraGanhos("Polietileno", 3.0),
+  calculadoraGanhos("Polipropileno", 2.5),
+  calculadoraGanhos("Poliestireno", 4.0),
+  calculadoraGanhos("PVC", 3.5),
+  calculadoraGanhos("Silicone", 5.0),
+  calculadoraGanhos("Fibra de vidro", 2.5),
   calculadoraGanhos("Tecido sintético", 2.0),
-  calculadoraGanhos("Papel", 0.50),
-  calculadoraGanhos("Papel reciclado", 0.30),
-  calculadoraGanhos("Madeira", 1.5),
-  calculadoraGanhos("eletrônicos", 20.0),
-  calculadoraGanhos("Baterias de lítio", 18.0),
-  calculadoraGanhos("Neodímio", 45.0),
-  calculadoraGanhos("Carbono", 10.0),
-  calculadoraGanhos("Resina epóxi", 7.0),
-  calculadoraGanhos("Grafite", 12.0),
-  calculadoraGanhos("Acrílico", 3.5),
+  calculadoraGanhos("Papel", 0.25),
+  calculadoraGanhos("Papel reciclado", 0.15),
+  calculadoraGanhos("Madeira", 1.0),
+  calculadoraGanhos("Eletrônicos", 15.0),
+  calculadoraGanhos("Baterias de lítio", 10.0),
+  calculadoraGanhos("Neodímio", 35.0),
+  calculadoraGanhos("Carbono", 5.0),
+  calculadoraGanhos("Resina epóxi", 4.5),
+  calculadoraGanhos("Grafite", 8.0),
+  calculadoraGanhos("Acrílico", 2.0),
+  calculadoraGanhos("Cerâmica", 1.2),
+  calculadoraGanhos("Composto de carbono", 4.0),
+  calculadoraGanhos("Fibra sintética", 3.0),
+  calculadoraGanhos("Têxtil natural", 1.5),
+  calculadoraGanhos("Biodiesel", 3.0),
+  calculadoraGanhos("Bioplástico", 2.0),
+  calculadoraGanhos("Poliuretano", 3.5),
+  calculadoraGanhos("Compostos químicos", 5.0),
+  calculadoraGanhos("Pneu", 5.0),
 ];
 
-class _fifthPageState extends State<fifthPage> {
+class _SixthPageState extends State<sixthPage> {
   @override
   Widget build(BuildContext context) {
     double altura = MediaQuery.of(context).size.height;
@@ -81,7 +90,7 @@ class _fifthPageState extends State<fifthPage> {
     final ButtonStyle style2 =
         ElevatedButton.styleFrom(backgroundColor: const Color(0xFF232323));
 
-    void calcularGanhos() {
+    void calcularCarbono() {
       if (materialselecionado != 0 && quilos > 0) {
         setState(() {
           resultado = quilos * materialselecionado;
@@ -216,16 +225,6 @@ class _fifthPageState extends State<fifthPage> {
                   ),
                 ),
                 ListTile(
-                  title: Text('Calculadora de Ganhos',
-                      style: GoogleFonts.jetBrainsMono(
-                          textStyle: const TextStyle(color: Colors.white))),
-                  onTap: () {},
-                  leading: const Image(
-                    image: AssetImage('images/calculator.png'),
-                    width: 40,
-                  ),
-                ),
-                ListTile(
                   title: Text('Calculadora de Carbono',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
@@ -234,7 +233,7 @@ class _fifthPageState extends State<fifthPage> {
                     image: AssetImage('images/co2.png'),
                     width: 40,
                   ),
-                ),
+                )
               ],
             )),
         body: SingleChildScrollView(
@@ -248,7 +247,7 @@ class _fifthPageState extends State<fifthPage> {
                 width: largura,
                 height: 40,
                 color: const Color(0xFF3E8538),
-                child: Text('Cotação dos Materiais Reciclaveis',
+                child: Text('Cotação de emissão de Carbono dos Materiais',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.faustina(
                         textStyle: const TextStyle(
@@ -263,7 +262,7 @@ class _fifthPageState extends State<fifthPage> {
                       color: const Color(0xFF2E643E),
                       borderRadius: BorderRadius.circular(20)),
                   child: ListView.builder(
-                    itemCount: calculadoraGanho.length,
+                    itemCount: calculadoraCarbono.length,
                     shrinkWrap: true,
                     physics: const BouncingScrollPhysics(),
                     itemBuilder: (context, index) {
@@ -275,13 +274,13 @@ class _fifthPageState extends State<fifthPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(calculadoraGanho[index].materiais,
+                                Text(calculadoraCarbono[index].materiais,
                                     style: GoogleFonts.faustina(
                                         textStyle: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 15))),
                                 Text(
-                                    'R\$ ${calculadoraGanho[index].cotacao.toStringAsFixed(2)} P/Kg',
+                                    'R\$ ${calculadoraCarbono[index].cotacao.toStringAsFixed(2)} P/Kg',
                                     style: GoogleFonts.faustina(
                                         textStyle: const TextStyle(
                                             color: Colors.white, fontSize: 15)))
@@ -295,7 +294,7 @@ class _fifthPageState extends State<fifthPage> {
                 width: largura,
                 height: 40,
                 color: const Color(0xFF3E8538),
-                child: Text('Cotação dos Materiais Reciclaveis',
+                child: Text('Calculadora De Emissões de CO2',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.faustina(
                         textStyle: const TextStyle(
@@ -313,7 +312,7 @@ class _fifthPageState extends State<fifthPage> {
                   children: <Widget>[
                     Align(
                       alignment: Alignment.centerLeft,
-                      child: Text('Calculadora De Ganhos',
+                      child: Text('Calculadora de Emissão de Carbono',
                           style: GoogleFonts.faustina(
                               textStyle: const TextStyle(
                                   color: Colors.white, fontSize: 22))),
@@ -326,7 +325,8 @@ class _fifthPageState extends State<fifthPage> {
                             filled: true,
                             fillColor: const Color(0xFF204029),
                             hintText: 'Insira a quantidade de peso (KG)',
-                            hintStyle: const TextStyle(color: Colors.white),
+                            hintStyle: const TextStyle(
+                                color: Colors.white, fontSize: 13),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide.none),
@@ -346,7 +346,7 @@ class _fifthPageState extends State<fifthPage> {
                     const Gap(20),
                     Expanded(
                         child: ListView.builder(
-                      itemCount: calculadoraGanho.length,
+                      itemCount: calculadoraCarbono.length,
                       scrollDirection: Axis.vertical,
                       shrinkWrap: true,
                       physics: const BouncingScrollPhysics(),
@@ -356,7 +356,7 @@ class _fifthPageState extends State<fifthPage> {
                             color: const Color(0xFF0C3728),
                             child: ListTile(
                               title: Text(
-                                calculadoraGanho[index].materiais,
+                                calculadoraCarbono[index].materiais,
                                 style: GoogleFonts.faustina(
                                     textStyle: const TextStyle(
                                         color: Colors.white, fontSize: 15)),
@@ -364,9 +364,9 @@ class _fifthPageState extends State<fifthPage> {
                               onTap: () {
                                 setState(() {
                                   materialselecionado =
-                                      calculadoraGanho[index].cotacao;
+                                      calculadoraCarbono[index].cotacao;
                                   nomematerialsecionado =
-                                      calculadoraGanho[index].materiais;
+                                      calculadoraCarbono[index].materiais;
                                 });
                               },
                             ));
@@ -389,7 +389,7 @@ class _fifthPageState extends State<fifthPage> {
                         ElevatedButton(
                           style: style,
                           onPressed: () {
-                            calcularGanhos();
+                            calcularCarbono();
                           },
                           child: Text(
                             'Calcular',
@@ -408,9 +408,10 @@ class _fifthPageState extends State<fifthPage> {
                       decoration: InputDecoration(
                           filled: true,
                           hintText:
-                              'Resultado: R\$ ${resultado.toStringAsFixed(2)} para $nomematerialsecionado',
+                              'Emissão de CO2: ${resultado.toStringAsFixed(2)} kg para: $nomematerialsecionado',
                           fillColor: const Color(0xFF204029),
-                          hintStyle: const TextStyle(color: Colors.white),
+                          hintStyle: const TextStyle(
+                              color: Colors.white, fontSize: 13),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide.none),

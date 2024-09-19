@@ -5,6 +5,7 @@ import 'package:ambilitysp/main.dart';
 import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/fifthPage.dart';
+import 'package:ambilitysp/sixthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -150,6 +151,23 @@ class ThirdPage extends StatelessWidget {
                       ),
                     ),
                     ListTile(
+                      title: Text('Calculadora de Ganhos',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(color: Colors.white))),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const fifthPage()), // caminho para a quarta pagina
+                        );
+                      },
+                      leading: const Image(
+                        image: AssetImage('images/calculator.png'),
+                        width: 40,
+                      ),
+                    ),
+                    ListTile(
                       title: Text('Calculadora de Carbono',
                           style: GoogleFonts.jetBrainsMono(
                               textStyle: const TextStyle(color: Colors.white))),
@@ -158,7 +176,7 @@ class ThirdPage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const fiftyPage()), // caminho para a quarta pagina
+                                  const sixthPage()), // caminho para a quarta pagina
                         );
                       },
                       leading: const Image(
