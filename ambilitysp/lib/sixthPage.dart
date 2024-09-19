@@ -11,6 +11,7 @@ import 'package:ambilitysp/thirdPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/calculdora.dart';
 import 'package:ambilitysp/main.dart';
+import 'package:ambilitysp/fifthPage.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -221,6 +222,23 @@ class _SixthPageState extends State<sixthPage> {
                   },
                   leading: const Image(
                     image: AssetImage('images/recicle.png'),
+                    width: 40,
+                  ),
+                ),
+                ListTile(
+                  title: Text('Calculadora de Ganhos',
+                      style: GoogleFonts.jetBrainsMono(
+                          textStyle: const TextStyle(color: Colors.white))),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const fifthPage()), // caminho para a quarta pagina
+                    );
+                  },
+                  leading: const Image(
+                    image: AssetImage('images/calculator.png'),
                     width: 40,
                   ),
                 ),

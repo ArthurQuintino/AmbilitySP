@@ -326,7 +326,7 @@ class _fifthPageState extends State<fifthPage> {
                             filled: true,
                             fillColor: const Color(0xFF204029),
                             hintText: 'Insira a quantidade de peso (KG)',
-                            hintStyle: const TextStyle(color: Colors.white),
+                            hintStyle: const TextStyle(color: Colors.white, fontSize: 13),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide.none),
@@ -410,7 +410,7 @@ class _fifthPageState extends State<fifthPage> {
                           hintText:
                               'Resultado: R\$ ${resultado.toStringAsFixed(2)} para $nomematerialsecionado',
                           fillColor: const Color(0xFF204029),
-                          hintStyle: const TextStyle(color: Colors.white),
+                          hintStyle: const TextStyle(color: Colors.white, fontSize: 13),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide.none),
