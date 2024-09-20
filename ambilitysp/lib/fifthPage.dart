@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:ambilitysp/sixthPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -229,7 +230,14 @@ class _fifthPageState extends State<fifthPage> {
                   title: Text('Calculadora de Carbono',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
-                  onTap: () {},
+                  onTap: () {
+                       Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const sixthPage()), // caminho para a quarta pagina
+                    );
+                  },
                   leading: const Image(
                     image: AssetImage('images/co2.png'),
                     width: 40,

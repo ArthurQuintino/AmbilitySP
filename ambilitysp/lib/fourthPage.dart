@@ -209,7 +209,7 @@ class FourthPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: largura / 1.3,
+                  width: largura / 1.15,
                   height: altura / 1.75,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
@@ -225,7 +225,7 @@ class FourthPage extends StatelessWidget {
                 ),
                 const Gap(10),
                 Container(
-                  width: largura / 1.3,
+                  width: largura / 1.15,
                   height: altura / 2.5,
                   child: Image.asset(
                     'images/EcoCirc.jpg',

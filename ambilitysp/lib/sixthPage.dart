@@ -265,7 +265,7 @@ class _SixthPageState extends State<sixthPage> {
                 width: largura,
                 height: 40,
                 color: const Color(0xFF3E8538),
-                child: Text('Cotação de emissão de Carbono dos Materiais',
+                child: Text('Taxa de Emissão de CO2 dos Materiais',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.faustina(
                         textStyle: const TextStyle(

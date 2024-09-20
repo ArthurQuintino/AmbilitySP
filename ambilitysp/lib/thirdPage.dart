@@ -193,28 +193,27 @@ class ThirdPage extends StatelessWidget {
               children: [
                 const Gap(60),
                 Container(
-                  width: largura / 1.3,
+                  width: largura / 1.15,
                   height: 120,
                   padding: const EdgeInsets.all(30),
                   decoration: BoxDecoration(
                       color: const Color(0xFF2E643E),
                       borderRadius: BorderRadius.circular(26)),
                   child: Text('Pontos de coleta de lixo mais proximos de você:',
-                      textAlign: TextAlign.justify,
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
-                              fontSize: 18, color: Colors.white))),
+                              fontSize: 13, color: Colors.white))),
                 ),
                 const Gap(60),
                 Container(
-                    width: largura / 1.3,
+                    width: largura / 1.15,
                     height: 550,
                     decoration: BoxDecoration(
                         color: const Color(0xFF2E643E),
                         borderRadius: BorderRadius.circular(20))),
                 const Gap(60),
                 Container(
-                    width: largura / 1.3,
+                    width: largura / 1.15,
                     height: 120,
                     padding: const EdgeInsets.all(30),
                     decoration: BoxDecoration(
@@ -222,13 +221,12 @@ class ThirdPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(26)),
                     child: Text(
                         'Materiais que podem ser descartados em segurança:',
-                        textAlign: TextAlign.justify,
                         style: GoogleFonts.jetBrainsMono(
                             textStyle: const TextStyle(
-                                fontSize: 18, color: Colors.white)))),
+                                fontSize: 13, color: Colors.white)))),
                 const Gap(50),
                 Container(
-                    width: largura / 1.3,
+                    width: largura / 1.15,
                     height: 300,
                     padding: const EdgeInsets.all(30),
                     decoration: BoxDecoration(
@@ -236,10 +234,9 @@ class ThirdPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(26)),
                     child: Text(
                         ' Entulhos de Construção \r Moveis Velhos \r Metais \r Papel e Papelão \r Eletrônicos \r Pilhas e baterias usadas \r Pneus \r Óleo de cozinha',
-                        textAlign: TextAlign.justify,
-                        style: GoogleFonts.jetBrainsMono(
+                        style: GoogleFonts.faustina(
                             textStyle: const TextStyle(
-                                fontSize: 18, color: Colors.white)))),
+                                fontSize: 13, color: Colors.white)))),
                 Container(
                     width: largura,
                     height: 50,
