@@ -31,53 +31,53 @@ double materialselecionado = 0.0;
 double resultado = 0;
 String nomematerialsecionado = '';
 
-List<calculadoraGanhos> calculadoraCarbono = [
-  calculadoraGanhos("Borracha", 2.5),
-  calculadoraGanhos("Plástico", 6.0),
-  calculadoraGanhos("Alumínio", 4.0),
-  calculadoraGanhos("Cobre", 15.0),
-  calculadoraGanhos("Ferro", 2.0),
-  calculadoraGanhos("Vidro", 0.7),
-  calculadoraGanhos("Papelão", 0.4),
-  calculadoraGanhos("Chumbo", 9.0),
-  calculadoraGanhos("Aço", 1.0),
-  calculadoraGanhos("Latão", 3.5),
-  calculadoraGanhos("Ouro", 100.0),
-  calculadoraGanhos("Prata", 7.0),
-  calculadoraGanhos("Níquel", 12.0),
-  calculadoraGanhos("Zinco", 1.5),
-  calculadoraGanhos("Bronze", 5.0),
-  calculadoraGanhos("Magnésio", 6.0),
-  calculadoraGanhos("Titânio", 20.0),
-  calculadoraGanhos("Chapa de aço", 1.5),
-  calculadoraGanhos("Fios de cobre", 22.0),
-  calculadoraGanhos("Baterias", 8.0),
-  calculadoraGanhos("Polietileno", 3.0),
-  calculadoraGanhos("Polipropileno", 2.5),
-  calculadoraGanhos("Poliestireno", 4.0),
-  calculadoraGanhos("PVC", 3.5),
-  calculadoraGanhos("Silicone", 5.0),
-  calculadoraGanhos("Fibra de vidro", 2.5),
-  calculadoraGanhos("Tecido sintético", 2.0),
-  calculadoraGanhos("Papel", 0.25),
-  calculadoraGanhos("Papel reciclado", 0.15),
-  calculadoraGanhos("Madeira", 1.0),
-  calculadoraGanhos("Eletrônicos", 15.0),
-  calculadoraGanhos("Baterias de lítio", 10.0),
-  calculadoraGanhos("Neodímio", 35.0),
-  calculadoraGanhos("Carbono", 5.0),
-  calculadoraGanhos("Resina epóxi", 4.5),
-  calculadoraGanhos("Grafite", 8.0),
-  calculadoraGanhos("Acrílico", 2.0),
-  calculadoraGanhos("Cerâmica", 1.2),
-  calculadoraGanhos("Composto de carbono", 4.0),
-  calculadoraGanhos("Fibra sintética", 3.0),
-  calculadoraGanhos("Têxtil natural", 1.5),
-  calculadoraGanhos("Biodiesel", 3.0),
-  calculadoraGanhos("Bioplástico", 2.0),
-  calculadoraGanhos("Poliuretano", 3.5),
-  calculadoraGanhos("Compostos químicos", 5.0),
-  calculadoraGanhos("Pneu", 5.0),
+List<CalculdoraCarbono> calculadoraCarbono = [
+  CalculdoraCarbono("Borracha", 2.5),
+  CalculdoraCarbono("Plástico", 6.0),
+  CalculdoraCarbono("Alumínio", 4.0),
+  CalculdoraCarbono("Cobre", 15.0),
+  CalculdoraCarbono("Ferro", 2.0),
+  CalculdoraCarbono("Vidro", 0.7),
+  CalculdoraCarbono("Papelão", 0.4),
+  CalculdoraCarbono("Chumbo", 9.0),
+  CalculdoraCarbono("Aço", 1.0),
+  CalculdoraCarbono("Latão", 3.5),
+  CalculdoraCarbono("Ouro", 100.0),
+  CalculdoraCarbono("Prata", 7.0),
+  CalculdoraCarbono("Níquel", 12.0),
+  CalculdoraCarbono("Zinco", 1.5),
+  CalculdoraCarbono("Bronze", 5.0),
+  CalculdoraCarbono("Magnésio", 6.0),
+  CalculdoraCarbono("Titânio", 20.0),
+  CalculdoraCarbono("Chapa de aço", 1.5),
+  CalculdoraCarbono("Fios de cobre", 22.0),
+  CalculdoraCarbono("Baterias", 8.0),
+  CalculdoraCarbono("Polietileno", 3.0),
+  CalculdoraCarbono("Polipropileno", 2.5),
+  CalculdoraCarbono("Poliestireno", 4.0),
+  CalculdoraCarbono("PVC", 3.5),
+  CalculdoraCarbono("Silicone", 5.0),
+  CalculdoraCarbono("Fibra de vidro", 2.5),
+  CalculdoraCarbono("Tecido sintético", 2.0),
+  CalculdoraCarbono("Papel", 0.25),
+  CalculdoraCarbono("Papel reciclado", 0.15),
+  CalculdoraCarbono("Madeira", 1.0),
+  CalculdoraCarbono("Eletrônicos", 15.0),
+  CalculdoraCarbono("Baterias de lítio", 10.0),
+  CalculdoraCarbono("Neodímio", 35.0),
+  CalculdoraCarbono("Carbono", 5.0),
+  CalculdoraCarbono("Resina epóxi", 4.5),
+  CalculdoraCarbono("Grafite", 8.0),
+  CalculdoraCarbono("Acrílico", 2.0),
+  CalculdoraCarbono("Cerâmica", 1.2),
+  CalculdoraCarbono("Composto de carbono", 4.0),
+  CalculdoraCarbono("Fibra sintética", 3.0),
+  CalculdoraCarbono("Têxtil natural", 1.5),
+  CalculdoraCarbono("Biodiesel", 3.0),
+  CalculdoraCarbono("Bioplástico", 2.0),
+  CalculdoraCarbono("Poliuretano", 3.5),
+  CalculdoraCarbono("Compostos químicos", 5.0),
+  CalculdoraCarbono("Pneu", 5.0),
 ];
 
 class _SixthPageState extends State<sixthPage> {
@@ -296,7 +296,7 @@ class _SixthPageState extends State<sixthPage> {
                                             color: Colors.white,
                                             fontSize: 15))),
                                 Text(
-                                    '${calculadoraCarbono[index].cotacao.toStringAsFixed(2)} CO² P/Kg',
+                                    '${calculadoraCarbono[index].co2.toStringAsFixed(2)} CO² P/Kg',
                                     style: GoogleFonts.faustina(
                                         textStyle: const TextStyle(
                                             color: Colors.white, fontSize: 15)))
@@ -383,7 +383,7 @@ class _SixthPageState extends State<sixthPage> {
                                 onTap: () {
                                   setState(() {
                                     materialselecionado =
-                                        calculadoraCarbono[index].cotacao;
+                                        calculadoraCarbono[index].co2;
                                     nomematerialsecionado =
                                         calculadoraCarbono[index].materiais;
                                   });
