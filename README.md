@@ -21,4 +21,7 @@ Nosso aplicativo consiste em alertar e disponibilizar aos moradores e turistas d
 [Imagens do Prototipo com os Widgets](https://github.com/ArthurQuintino/AmbilitySP/wiki/Widgets-e-as-páginas)<br>
 [Documentação da Codificação](https://github.com/ArthurQuintino/AmbilitySP/wiki/Documenta%C3%A7%C3%A3o-da-Codifica%C3%A7%C3%A3o)<br>
 [Videos de Navegação](https://github.com/ArthurQuintino/AmbilitySP/wiki/Documenta%C3%A7%C3%A3o-da-Codifica%C3%A7%C3%A3o#videos-de-navega%C3%A7%C3%A3o)<br>
+[Principais Atualizações Visuais do Projeto](https://github.com/ArthurQuintino/AmbilitySP/wiki/Atualiza%C3%A7%C3%B5es-do-Projeto#principais-atualiza%C3%A7%C3%B5es-visuais-do-projeto)<br>
+[Principais atualizações no código](https://github.com/ArthurQuintino/AmbilitySP/wiki/Atualiza%C3%A7%C3%B5es-do-Projeto#principais-atualiza%C3%A7%C3%B5es-no-c%C3%B3digo)<br>
+[Video da nossa Aplicação com as Atualizações](https://github.com/ArthurQuintino/AmbilitySP/wiki/Atualiza%C3%A7%C3%B5es-do-Projeto#video-do-aplicativo-funcionando)<br>
 
