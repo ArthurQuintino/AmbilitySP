@@ -6,6 +6,9 @@ import 'package:ambilitysp/secondPage.dart';
 import 'package:ambilitysp/fourthPage.dart';
 import 'package:ambilitysp/fifthPage.dart';
 import 'package:ambilitysp/sixthPage.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:latlong2/latlong.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -21,7 +24,7 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final largura =
         MediaQuery.of(context).size.width; // contador de largura da tela
-    //final altura = MediaQuery.of(context).size.height; // contador de altura da tela
+    final altura = MediaQuery.of(context).size.height; // contador de altura da tela
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
@@ -191,7 +194,7 @@ class ThirdPage extends StatelessWidget {
                 child: Center(
                     child: Column(
               children: [
-                const Gap(60),
+                const Gap(30),
                 Container(
                   width: largura / 1.15,
                   height: 120,
@@ -202,16 +205,39 @@ class ThirdPage extends StatelessWidget {
                   child: Text('Pontos de coleta de lixo mais proximos de você:',
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(
-                              fontSize: 13, color: Colors.white))),
+                              fontSize: 16, color: Colors.white))),
                 ),
-                const Gap(60),
+                const Gap(30),
                 Container(
                     width: largura / 1.15,
-                    height: 550,
+                    height: altura / 1.8,
                     decoration: BoxDecoration(
                         color: const Color(0xFF2E643E),
-                        borderRadius: BorderRadius.circular(20))),
-                const Gap(60),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: FlutterMap(
+                        options: MapOptions(
+                          initialCenter: LatLng(-23.9522427,-46.3757725), // localização de santos logintude e latitude
+                          initialZoom: 10,
+                        ),
+                        children: [
+                          TileLayer(
+                            urlTemplate:
+                                'https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
+                            userAgentPackageName: 'com.example.app',
+                            maxNativeZoom:
+                                19, 
+                          ),
+                          RichAttributionWidget(
+                            attributions: [
+                              TextSourceAttribution(
+                                'OpenStreetMap contributors',
+                                onTap: () => launchUrl(Uri.parse(
+                                    'https://openstreetmap.org/copyright')),
+                              ),
+                            ],
+                          ),
+                        ])),
+                const Gap(30),
                 Container(
                     width: largura / 1.15,
                     height: 120,
@@ -223,8 +249,8 @@ class ThirdPage extends StatelessWidget {
                         'Materiais que podem ser descartados em segurança:',
                         style: GoogleFonts.jetBrainsMono(
                             textStyle: const TextStyle(
-                                fontSize: 13, color: Colors.white)))),
-                const Gap(50),
+                                fontSize: 16, color: Colors.white)))),
+                const Gap(30),
                 Container(
                     width: largura / 1.15,
                     height: 300,
@@ -236,7 +262,7 @@ class ThirdPage extends StatelessWidget {
                         ' Entulhos de Construção \r Moveis Velhos \r Metais \r Papel e Papelão \r Eletrônicos \r Pilhas e baterias usadas \r Pneus \r Óleo de cozinha',
                         style: GoogleFonts.faustina(
                             textStyle: const TextStyle(
-                                fontSize: 13, color: Colors.white)))),
+                                fontSize: 16, color: Colors.white)))),
                 Container(
                     width: largura,
                     height: 50,

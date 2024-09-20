@@ -223,7 +223,7 @@ class FourthPage extends StatelessWidget {
                           textStyle: const TextStyle(
                               color: Colors.white, fontSize: 16))),
                 ),
-                const Gap(10),
+                const Gap(30),
                 Container(
                   width: largura / 1.15,
                   height: altura / 2.5,
@@ -231,7 +231,7 @@ class FourthPage extends StatelessWidget {
                     'images/EcoCirc.jpg',
                   ),
                 ),
-                const Gap(10),
+                const Gap(30),
                 ElevatedButton(
                   onPressed: _launchURL,
                   style: ButtonStyle(

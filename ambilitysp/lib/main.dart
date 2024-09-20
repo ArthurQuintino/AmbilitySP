@@ -277,7 +277,7 @@ class MainApp extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(27, 10, 27, 10),
                 child: Container(
                   width: largura * 1.0,
-                  height: altura * 0.17,
+                  height: altura * 0.18,
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                   decoration: BoxDecoration(
                       color: const Color(0xFF2E643E),

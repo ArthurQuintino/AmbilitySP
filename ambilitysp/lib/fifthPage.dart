@@ -79,8 +79,6 @@ class _fifthPageState extends State<fifthPage> {
 
     final ButtonStyle style =
         ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1A8438));
-    final ButtonStyle style2 =
-        ElevatedButton.styleFrom(backgroundColor: const Color(0xFF232323));
 
     void calcularGanhos() {
       if (materialselecionado != 0 && quilos > 0) {
@@ -231,7 +229,7 @@ class _fifthPageState extends State<fifthPage> {
                       style: GoogleFonts.jetBrainsMono(
                           textStyle: const TextStyle(color: Colors.white))),
                   onTap: () {
-                       Navigator.push(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
@@ -262,10 +260,10 @@ class _fifthPageState extends State<fifthPage> {
                         textStyle: const TextStyle(
                             color: Colors.white, fontSize: 20))),
               ),
-              const Gap(20),
+              const Gap(30),
               Container(
                   width: largura / 1.15,
-                  height: altura * 0.3,
+                  height: altura * 0.40,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: const Color(0xFF2E643E),
@@ -298,7 +296,7 @@ class _fifthPageState extends State<fifthPage> {
                           ));
                     },
                   )),
-              const Gap(20),
+              const Gap(30),
               Container(
                 width: largura,
                 height: 40,
@@ -309,10 +307,10 @@ class _fifthPageState extends State<fifthPage> {
                         textStyle: const TextStyle(
                             color: Colors.white, fontSize: 20))),
               ),
-              const Gap(20),
+              const Gap(30),
               Container(
                 width: largura / 1.15,
-                height: altura / 1.4,
+                height: 590,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                     color: const Color(0xFF2E643E),
@@ -334,7 +332,8 @@ class _fifthPageState extends State<fifthPage> {
                             filled: true,
                             fillColor: const Color(0xFF204029),
                             hintText: 'Insira a quantidade de peso (KG)',
-                            hintStyle: const TextStyle(color: Colors.white, fontSize: 13),
+                            hintStyle: const TextStyle(
+                                color: Colors.white, fontSize: 13),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide.none),
@@ -352,63 +351,56 @@ class _fifthPageState extends State<fifthPage> {
                           ];
                         }),
                     const Gap(20),
-                    Expanded(
-                        child: ListView.builder(
-                      itemCount: calculadoraGanho.length,
-                      scrollDirection: Axis.vertical,
-                      shrinkWrap: true,
-                      physics: const BouncingScrollPhysics(),
-                      itemBuilder: (BuildContext ctx, index) {
-                        return Card(
-                            elevation: 3,
-                            color: const Color(0xFF0C3728),
-                            child: ListTile(
-                              title: Text(
-                                calculadoraGanho[index].materiais,
-                                style: GoogleFonts.faustina(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white, fontSize: 15)),
-                              ),
-                              onTap: () {
-                                setState(() {
-                                  materialselecionado =
-                                      calculadoraGanho[index].cotacao;
-                                  nomematerialsecionado =
-                                      calculadoraGanho[index].materiais;
-                                });
-                              },
-                            ));
-                      },
-                    )),
-                    const Gap(20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ElevatedButton(
-                          style: style2,
-                          onPressed: () {},
-                          child: Text(
-                            'Limpar',
-                            style: GoogleFonts.jetBrainsMono(
-                                textStyle: const TextStyle(
-                                    color: Colors.white, fontSize: 12)),
-                          ),
-                        ),
-                        ElevatedButton(
-                          style: style,
-                          onPressed: () {
-                            calcularGanhos();
-                          },
-                          child: Text(
-                            'Calcular',
-                            style: GoogleFonts.jetBrainsMono(
-                                textStyle: const TextStyle(
-                                    color: Colors.white, fontSize: 12)),
-                          ),
-                        ),
-                      ],
+                    SizedBox(
+                      width: largura / 1.15,
+                      height: 280,
+                      child: Expanded(
+                          child: ListView.builder(
+                        itemCount: calculadoraGanho.length,
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        physics: const BouncingScrollPhysics(),
+                        itemBuilder: (BuildContext ctx, index) {
+                          return Card(
+                              elevation: 3,
+                              color: const Color(0xFF0C3728),
+                              child: ListTile(
+                                title: Text(
+                                  calculadoraGanho[index].materiais,
+                                  style: GoogleFonts.faustina(
+                                      textStyle: const TextStyle(
+                                          color: Colors.white, fontSize: 15)),
+                                ),
+                                onTap: () {
+                                  setState(() {
+                                    materialselecionado =
+                                        calculadoraGanho[index].cotacao;
+                                    nomematerialsecionado =
+                                        calculadoraGanho[index].materiais;
+                                  });
+                                },
+                              ));
+                        },
+                      )),
                     ),
-                    const Gap(40),
+                    const Gap(20),
+                    SizedBox(
+                      width: largura / 1.12,
+                      height: 30,
+                      child: ElevatedButton(
+                        style: style,
+                        onPressed: () {
+                          calcularGanhos();
+                        },
+                        child: Text(
+                          'Calcular',
+                          style: GoogleFonts.jetBrainsMono(
+                              textStyle: const TextStyle(
+                                  color: Colors.white, fontSize: 12)),
+                        ),
+                      ),
+                    ),
+                    const Gap(20),
                     TextField(
                       cursorColor: Colors.white,
                       readOnly: true,
@@ -418,7 +410,8 @@ class _fifthPageState extends State<fifthPage> {
                           hintText:
                               'Resultado: R\$ ${resultado.toStringAsFixed(2)} para $nomematerialsecionado',
                           fillColor: const Color(0xFF204029),
-                          hintStyle: const TextStyle(color: Colors.white, fontSize: 13),
+                          hintStyle: const TextStyle(
+                              color: Colors.white, fontSize: 13),
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20),
                               borderSide: BorderSide.none),
