@@ -88,8 +88,6 @@ class _SixthPageState extends State<sixthPage> {
 
     final ButtonStyle style =
         ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1A8438));
-    final ButtonStyle style2 =
-        ElevatedButton.styleFrom(backgroundColor: const Color(0xFF232323));
 
     void calcularCarbono() {
       if (materialselecionado != 0 && quilos > 0) {
@@ -298,7 +296,7 @@ class _SixthPageState extends State<sixthPage> {
                                             color: Colors.white,
                                             fontSize: 15))),
                                 Text(
-                                    'R\$ ${calculadoraCarbono[index].cotacao.toStringAsFixed(2)} P/Kg',
+                                    '${calculadoraCarbono[index].cotacao.toStringAsFixed(2)} CO² P/Kg',
                                     style: GoogleFonts.faustina(
                                         textStyle: const TextStyle(
                                             color: Colors.white, fontSize: 15)))

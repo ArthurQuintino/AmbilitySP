@@ -210,7 +210,7 @@ class FourthPage extends StatelessWidget {
                 ),
                 Container(
                   width: largura / 1.15,
-                  height: altura / 1.75,
+                  height: altura / 3,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: const Color(0xFF2E643E),
